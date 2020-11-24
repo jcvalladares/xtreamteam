@@ -4,6 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sfda.entity.Users;
@@ -31,9 +32,14 @@ public class LoginController {
     }
 	
 	@PostMapping(path = UserLinks.LOGIN_USER)
-	public ResponseEntity<?> loginUser(String email, String password) {
+	public @ResponseBody Users loginUser(String email, String password) {
 		log.info("In loginUser");
-        return ResponseEntity.ok("SUCCESS");//TODO
+		Users users = new Users();
+		users.setId(12345);
+		users.setFirstName("Joe");
+		users.setLastName("Stitt");
+		users.setEmail("abcd@xyz.com");
+        return users;
     }
 	
 	@PostMapping(path = UserLinks.FORGET_PASSWORD)
