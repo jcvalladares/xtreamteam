@@ -15,13 +15,17 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 public class QRCodeGenerator {
 
-	public BitMatrix createQRCode(String qrGeneratorCode, String charset, Map hintMap, int qrHeight, int qrWidth)
+	public BitMatrix createQRCode(String qrGeneratorCode, String charset,
+			Map<EncodeHintType, ErrorCorrectionLevel> hintMap, int qrHeight, int qrWidth)
 			throws WriterException, IOException {
-
-		return new BitMatrix(100);
+		BitMatrix matrix = new MultiFormatWriter().encode(new String(qrGeneratorCode.getBytes(charset), charset),
+				BarcodeFormat.QR_CODE, qrWidth, qrHeight, hintMap);
+		return matrix;
 	}
 
 	public void saveQRCode(BitMatrix matrix, String filePath) throws WriterException, IOException {
-	
+		MatrixToImageConfig config = new MatrixToImageConfig();
+		MatrixToImageWriter.writeToPath(matrix, filePath.substring(filePath.lastIndexOf('.') + 1),
+				new File(filePath).toPath(), config);
 	}
 }
