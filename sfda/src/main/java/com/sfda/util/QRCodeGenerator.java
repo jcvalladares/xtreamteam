@@ -18,7 +18,7 @@ public class QRCodeGenerator {
 	public BitMatrix createQRCode(String qrGeneratorCode, String charset, Map hintMap, int qrHeight, int qrWidth)
 			throws WriterException, IOException {
 
-		return null;
+		return new BitMatrix(100);
 	}
 
 	public void saveQRCode(BitMatrix matrix, String filePath) throws WriterException, IOException {
