@@ -2,11 +2,12 @@ package com.sfda.users;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,7 +16,6 @@ import javax.imageio.ImageIO;
 import org.junit.jupiter.api.Test;
 
 import com.google.zxing.BinaryBitmap;
-import com.google.zxing.DecodeHintType;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.MultiFormatReader;
 import com.google.zxing.NotFoundException;
@@ -84,7 +84,20 @@ class QRCodeGeneratorTest {
 	}
 
 	@Test
-	public void testQRCodeInputParamsValidity() {
-		assertTrue(true);
+	public void testQRCodeInputParamsValidity() throws WriterException, IOException {
+		// create the QR code
+		QRCodeGenerator codeGenerator = new QRCodeGenerator();
+		String qrGeneratorCode = "SFDA_Test";
+		String charset = "ABCD";
+		Map<EncodeHintType, ErrorCorrectionLevel> hintMap = new HashMap<EncodeHintType, ErrorCorrectionLevel>();
+		hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
+
+		Exception exception = assertThrows(UnsupportedEncodingException.class, () -> {
+			codeGenerator.createQRCode(qrGeneratorCode, charset, hintMap, 250, 250);
+		});
+		String expectedMessage = "ABCD";
+		String actualMessage = exception.getMessage();
+
+		assertTrue(actualMessage.contains(expectedMessage));
 	}
 }
