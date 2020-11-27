@@ -1,4 +1,4 @@
-package com.sfda.users;
+package com.sfda.util;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
@@ -25,7 +25,6 @@ import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
-import com.sfda.util.QRCodeGenerator;
 
 class QRCodeGeneratorTest {
 
