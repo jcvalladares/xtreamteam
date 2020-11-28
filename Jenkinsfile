@@ -9,7 +9,7 @@ pipeline {
  agent any
   tools {
         //env.M2_HOME = tool name: 'Maven 3.2', type: 'maven'
-        maven 'Maven 3.1'
+        maven 'Maven3.6.3'
         }
        
   stages{
