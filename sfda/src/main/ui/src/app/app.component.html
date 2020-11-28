@@ -20,6 +20,26 @@
             <input type="text" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
           </div>
         </div>
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label for="birthDate">Birth Date</label>
+            <input type="date" class="form-control" formControlName="birthDate" id="birthDate" aria-describedby="birthDateHelp" placeholder="10/01/1975">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label for="userType">User Type</label>
+			<select name="type" class="form-control" id="userType" aria-describedby="typeHelp" >
+			  <option hidden selected>USER</option>
+			  <option value="NGO">NGO</option>
+			  <option value="DONOR">DONOR</option>
+			  <option value="VENDOR">VENDOR</option>
+			  <option value="FAMILY">FAMILY</option>
+			</select>
+          </div>
+        </div>
+         	<input type="hidden" id="isValidated" name="isValidated" value="N">
+         	<input type="hidden" id="isQRCodeGenerated" name="isQRCodeGenerated" value="N">
         <button type="submit" [disabled]="!userForm.valid" class="btn btn-danger">Create</button>
       </form>
     </div>
