@@ -1,0 +1,34 @@
+<button type="button" class="btn btn-primary" data-toggle="modal"  data-target="#exampleModalLong">
+  Login
+</button>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <fieldset>
+            <div class="form-group">
+              <input class="form-control" formControlName="login" placeholder="yourmail@example.com" type="email">
+            </div>
+            <div class="form-group">
+              <input class="form-control" formControlName="password" placeholder="Password" type="password">
+            </div>
+          </fieldset>
+
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Login</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
