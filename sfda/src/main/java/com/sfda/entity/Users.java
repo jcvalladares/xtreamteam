@@ -7,8 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
-import org.hibernate.annotations.ColumnDefault;
-
 import lombok.Data;
 import lombok.Getter;
 
