@@ -1,7 +1,10 @@
+import { SignupService } from './signup.service';
 import { IUser } from './../shared/IUser';
-
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Config } from '../shared/Config';
+
 @Component({
   selector: 'app-singup',
   templateUrl: './singup.component.html',
@@ -9,30 +12,28 @@ import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms'
 })
 export class SingupComponent implements OnInit {
 
-  constructor() { }
+
   signUpForm = new FormGroup({
     firstName: new FormControl(''),
     middleName: new FormControl(''),
     lastName: new FormControl(''),
     Id: new FormControl(''),
-    Phone: new FormControl('')
+    phone: new FormControl(''),
+    email: new FormControl(''),
+    password: new FormControl(''),
+    password2: new FormControl('')
   });
 
-  onSubmit(customerData) {
-    const firstName = this.signUpForm.controls.firstName.value;
-    const middleName = this.signUpForm.controls.middleName.value;
-    const lastName = this.signUpForm.controls.lastName.value;
-    const id = this.signUpForm.controls.Id.value;
-    const phone = this.signUpForm.controls.Phone.value;
+  onSubmit(newUser: IUser) {
+    this.http.signUp(newUser)
+    .subscribe((token: IUser) => {
 
-    // this.loginServices.Login(email, password)
-    // .subscribe((token: IUser) => {
-    //   this.token = token;
-    // }, (error) => {
-    //   localStorage.setItem('token2', '1234');
-    // });
+    }, (error) => {
+
+    });
 
   }
+  constructor(private http: SignupService, private config: Config) { }
   ngOnInit(): void {
   }
 

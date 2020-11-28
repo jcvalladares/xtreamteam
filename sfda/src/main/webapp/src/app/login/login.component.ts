@@ -35,8 +35,8 @@ export class LoginComponent implements OnInit {
     }, (error) => {
       localStorage.setItem('token2', '1234');
     });
-
   }
+
   constructor(private loginServices: LoginService) { }
 
   ngOnInit(): void {

@@ -14,25 +14,34 @@
         </div>
         <div class="modal-body">
           <p>If you are a family in need, we will provide with food and support during this period of pandenic.m</p>
-          <form accept-charset="UTF-8" role="form">
+
             <fieldset>
               <div class="form-group">
-                <input class="form-control" placeholder="First Name" name="First Name" type="text">
+                <input class="form-control" formControlName="firstName" placeholder="First Name" type="text">
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Middle Name" name="Middle Name" type="text">
+                <input class="form-control" formControlName="middleName" placeholder="Middle Name"  type="text">
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Last Name" name="Last Name" type="text">
+                <input class="form-control" formControlName="lastName" placeholder="Last Name"  type="text">
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="ID" name="ID" type="text">
+                <input class="form-control" formControlName="Id"  placeholder="ID"  type="text">
               </div>
               <div class="form-group">
-                <input class="form-control" placeholder="Phone" name="ID" type="phone">
+                <input class="form-control" formControlName="phone"  placeholder="Phone"  type="text">
+              </div>
+              <div class="form-group">
+                <input class="form-control" formControlName="email"  placeholder="Email"  type="text">
+              </div>
+              <div class="form-group">
+                <input class="form-control" formControlName="password"  placeholder="Password"  type="password">
+              </div>
+              <div class="form-group">
+                <input class="form-control" formControlName="password2"  placeholder="Password Again"   type="password">
               </div>
             </fieldset>
-          </form>
+
         </div>
         <div class="modal-footer">
           <button type="submit" class="btn btn-primary">Save</button>

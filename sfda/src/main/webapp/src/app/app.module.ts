@@ -1,3 +1,4 @@
+import { SignupService } from './singup/signup.service';
 import { Config } from './shared/Config';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injectable } from '@angular/core';
@@ -27,7 +28,8 @@ import { FormsModule, NgControl, ReactiveFormsModule } from '@angular/forms';
   providers: [
     HttpClient,
     Config,
-    LoginService
+    LoginService,
+    SignupService
 
   ],
   bootstrap: [AppComponent]
