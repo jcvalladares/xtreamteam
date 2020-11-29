@@ -6,31 +6,37 @@
       <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
         <div class="row">
           <div class="form-group col-md-6">
-            <label for="exampleInputEmail1">First Name</label>
-            <input type="text" class="form-control" formControlName="firstName" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="First Name">
+            <label for="inputFirstName">First Name</label>
+            <input type="text" class="form-control" formControlName="firstName" id="inputFirstName" aria-describedby="firstNameHelp" placeholder="First Name">
           </div>
           <div class="form-group col-md-6">
-            <label for="exampleInputPassword1">Last Name</label>
-            <input type="text" class="form-control" formControlName="lastName" id="exampleInputPassword1" placeholder="Last Name">
+            <label for="inputFirstName">Middle Name</label>
+            <input type="text" class="form-control" formControlName="middleName" id="inputFirstName" aria-describedby="middleNameHelp" placeholder="Middle Name">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputLastName">Last Name</label>
+            <input type="text" class="form-control" formControlName="lastName" id="inputLastName" aria-describedby="lastNameHelp" placeholder="Last Name">
           </div>
         </div>
         <div class="row">
-          <div class="form-group col-md-12">
-            <label for="exampleInputEmail1">Email</label>
-            <input type="text" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+          <div class="form-group col-md-6">
+            <label for="inputEmail">Email/UserName</label>
+            <input type="text" class="form-control" formControlName="email" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control" formControlName="password" id="inputPassword" aria-describedby="passwordHelp" placeholder="Password">
           </div>
         </div>
         <div class="row">
-          <div class="form-group col-md-12">
+          <div class="form-group col-md-6">
             <label for="birthDate">Birth Date</label>
             <input type="date" class="form-control" formControlName="birthDate" id="birthDate" aria-describedby="birthDateHelp" placeholder="10/01/1975">
           </div>
-        </div>
-        <div class="row">
-          <div class="form-group col-md-12">
+          <div class="form-group col-md-6">
             <label for="userType">User Type</label>
-			<select name="type" class="form-control" id="userType" aria-describedby="typeHelp" >
-			  <option hidden selected>USER</option>
+			<select name="type" class="form-control" formControlName="type" id="userType" aria-describedby="typeHelp" >
+			  <option hidden value="USER" selected>USER</option>
 			  <option value="NGO">NGO</option>
 			  <option value="DONOR">DONOR</option>
 			  <option value="VENDOR">VENDOR</option>
@@ -38,8 +44,8 @@
 			</select>
           </div>
         </div>
-         	<input type="hidden" id="isValidated" name="isValidated" value="N">
-         	<input type="hidden" id="isQRCodeGenerated" name="isQRCodeGenerated" value="N">
+         	<input type="hidden" formControlName="isValidated" id="isValidated" name="isValidated" value="N">
+         	<input type="hidden" formControlName="isQRCodeGenerated" id="isQRCodeGenerated" name="isQRCodeGenerated" value="N">
         <button type="submit" [disabled]="!userForm.valid" class="btn btn-danger">Create</button>
       </form>
     </div>
@@ -54,4 +60,3 @@
 </div>
 <div class="mrgnbtm">
   <app-users *ngIf="users.length !== 0" [users]="users"></app-users>
-</div>
