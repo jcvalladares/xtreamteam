@@ -29,7 +29,7 @@ pipeline {
       stage('Deploy ') {
             steps {
                 script {    
-                        bat "${env.M2_HOME}/bin/mvn -f ${env.WORKSPACE}/sfda/restartApp.bat
+                        bat "${env.M2_HOME}/bin/mvn -f ${env.WORKSPACE}/sfda/restartApp.bat"
                 }
             }
         }
