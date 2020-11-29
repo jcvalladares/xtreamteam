@@ -35,12 +35,11 @@ class QRCodeGeneratorTest {
 
 	@Test
 	public void testQRCodeIsNotEmpty() throws WriterException, IOException {
-		QRCodeGenerator codeGenerator = new QRCodeGenerator();
 		String qrGeneratorCode = "SFDA_Test";
 		String charset = "UTF-8";
 		Map<EncodeHintType, ErrorCorrectionLevel> hintMap = new HashMap<EncodeHintType, ErrorCorrectionLevel>();
 		hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
-		BitMatrix matrix = codeGenerator.createQRCode(qrGeneratorCode, charset, hintMap, 250, 250);
+		BitMatrix matrix = QRCodeGenerator.createQRCode(qrGeneratorCode, charset, hintMap, 250, 250);
 
 		assertTrue(matrix != null);
 	}
@@ -53,7 +52,7 @@ class QRCodeGeneratorTest {
 		String charset = "UTF-8";
 		Map<EncodeHintType, ErrorCorrectionLevel> hintMap = new HashMap<EncodeHintType, ErrorCorrectionLevel>();
 		hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
-		BitMatrix matrix = codeGenerator.createQRCode(qrGeneratorCode, charset, hintMap, 250, 250);
+		BitMatrix matrix = QRCodeGenerator.createQRCode(qrGeneratorCode, charset, hintMap, 250, 250);
 		// save the QR code
 		codeGenerator.saveQRCode(matrix, "QRCode.png");
 
@@ -75,7 +74,7 @@ class QRCodeGeneratorTest {
 		String charset = "UTF-8";
 		Map<EncodeHintType, ErrorCorrectionLevel> hintMap = new HashMap<EncodeHintType, ErrorCorrectionLevel>();
 		hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
-		BitMatrix matrix = codeGenerator.createQRCode(qrGeneratorCode, charset, hintMap, 250, 250);
+		BitMatrix matrix = QRCodeGenerator.createQRCode(qrGeneratorCode, charset, hintMap, 250, 250);
 		// save the QR code
 		codeGenerator.saveQRCode(matrix, "QRCode.png");
 
@@ -84,15 +83,13 @@ class QRCodeGeneratorTest {
 
 	@Test
 	public void testQRCodeInputParamsValidity() throws WriterException, IOException {
-		// create the QR code
-		QRCodeGenerator codeGenerator = new QRCodeGenerator();
 		String qrGeneratorCode = "SFDA_Test";
 		String charset = "ABCD";
 		Map<EncodeHintType, ErrorCorrectionLevel> hintMap = new HashMap<EncodeHintType, ErrorCorrectionLevel>();
 		hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
 
 		Exception exception = assertThrows(UnsupportedEncodingException.class, () -> {
-			codeGenerator.createQRCode(qrGeneratorCode, charset, hintMap, 250, 250);
+			QRCodeGenerator.createQRCode(qrGeneratorCode, charset, hintMap, 250, 250);
 		});
 		String expectedMessage = "ABCD";
 		String actualMessage = exception.getMessage();
