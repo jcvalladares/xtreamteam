@@ -43,6 +43,7 @@ class UsersApplicationTests {
 		user1.setType("NGO");
 		user1.setIsValidated("Y");
 		user1.setIsQRCodeGenerated("Y");
+		user1.setPhone("123456789");
 		ResponseEntity<?> response = userController.saveUser(user1);
 		assertTrue(response.getStatusCode() == HttpStatus.OK);
 	}
@@ -51,6 +52,8 @@ class UsersApplicationTests {
 	public void testUnSuccessfulUserSaveFromAdminScreenScenario() {
 		Users user = new Users();
 		user.setFirstName("TestFirst");//only setting one of the required field
+		user.setPhone("123456789");
+		user.setEmail("aa@bb.com");
 		Exception exception = assertThrows(TransactionSystemException.class, () -> {
 			userController.saveUser(user);
 		});
@@ -75,6 +78,7 @@ class UsersApplicationTests {
 		user.setType("DONOR");
 		user.setIsValidated("Y");
 		user.setIsQRCodeGenerated("Y");
+		user.setPhone("123456789");
 		ResponseEntity<?> response = loginController.registerUser(user);
 		assertTrue(response.getStatusCode() == HttpStatus.OK);
 	}
@@ -82,6 +86,8 @@ class UsersApplicationTests {
 	@Test
 	public void testUnSuccessfulRegisterUserScenario() {
 		Users user = new Users();//not setting the required fields
+		user.setPhone("123456789");
+		user.setEmail("aa@bb.com");
 		Exception exception = assertThrows(TransactionSystemException.class, () -> {
 			loginController.registerUser(user);
 		});
@@ -114,7 +120,7 @@ class UsersApplicationTests {
 		LoginController mockLoginController = new LoginController(service);
 	    Mockito.when(usersRepository.save(Mockito.any())).thenThrow(new RuntimeException("Database is down."));
 	    Users user = new Users();
-	    
+	    user.setPhone("123456789");
 	    Exception exception = assertThrows(RuntimeException.class, () -> {
 	    	mockLoginController.registerUser(user);
 		});
@@ -139,7 +145,8 @@ class UsersApplicationTests {
 		LoginController mockLoginController = new LoginController(service);
 	    Mockito.when(usersRepository.findAll()).thenThrow(new RuntimeException("Email address not found in our system."));
 	    Users user = new Users();
-	    
+	    user.setPhone("123456789");
+		user.setEmail("aa@bb.com");
 	    Exception exception = assertThrows(RuntimeException.class, () -> {
 	    	mockLoginController.resetPassword(user);
 		});
