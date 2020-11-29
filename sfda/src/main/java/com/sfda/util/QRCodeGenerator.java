@@ -15,12 +15,11 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
 public class QRCodeGenerator {
 
-	public BitMatrix createQRCode(String qrGeneratorCode, String charset,
+	public static BitMatrix createQRCode(String qrGeneratorCode, String charset,
 			Map<EncodeHintType, ErrorCorrectionLevel> hintMap, int qrHeight, int qrWidth)
 			throws WriterException, IOException {
-		BitMatrix matrix = new MultiFormatWriter().encode(new String(qrGeneratorCode.getBytes(charset), charset),
+		return new MultiFormatWriter().encode(new String(qrGeneratorCode.getBytes(charset), charset),
 				BarcodeFormat.QR_CODE, qrWidth, qrHeight, hintMap);
-		return matrix;
 	}
 
 	public void saveQRCode(BitMatrix matrix, String filePath) throws WriterException, IOException {

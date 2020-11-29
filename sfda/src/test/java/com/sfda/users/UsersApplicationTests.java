@@ -44,7 +44,7 @@ class UsersApplicationTests {
 		user1.setIsValidated("Y");
 		user1.setIsQRCodeGenerated("Y");
 		ResponseEntity<?> response = userController.saveUser(user1);
-		assert response.getStatusCode() == HttpStatus.OK;
+		assertTrue(response.getStatusCode() == HttpStatus.OK);
 	}
 
 	@Test
@@ -56,13 +56,13 @@ class UsersApplicationTests {
 		});
 		String expectedMessage = "Could not commit JPA transaction";
 		String actualMessage = exception.getMessage();
-		assert actualMessage.contains(expectedMessage) == true;
+		assertTrue(actualMessage.contains(expectedMessage));
 	}
 
 	@Test
 	public void testGetAllUsersScenario() {
 		ResponseEntity<?> response = userController.listUsers();
-		assert response.getStatusCode() == HttpStatus.OK;
+		assertTrue(response.getStatusCode() == HttpStatus.OK);
 	}
 	
 	@Test
@@ -76,7 +76,7 @@ class UsersApplicationTests {
 		user.setIsValidated("Y");
 		user.setIsQRCodeGenerated("Y");
 		ResponseEntity<?> response = loginController.registerUser(user);
-		assert response.getStatusCode() == HttpStatus.OK;
+		assertTrue(response.getStatusCode() == HttpStatus.OK);
 	}
 	
 	@Test
@@ -87,7 +87,7 @@ class UsersApplicationTests {
 		});
 		String expectedMessage = "Could not commit JPA transaction";
 		String actualMessage = exception.getMessage();
-		assert actualMessage.contains(expectedMessage) == true;
+		assertTrue(actualMessage.contains(expectedMessage));
 	}
 	
 	@Test
@@ -120,7 +120,7 @@ class UsersApplicationTests {
 		});
 		String expectedMessage = "Database is down.";
 		String actualMessage = exception.getMessage();
-		assert actualMessage.contains(expectedMessage) == true;
+		assertTrue(actualMessage.contains(expectedMessage));
 	}
 	
 	@Test
@@ -128,7 +128,7 @@ class UsersApplicationTests {
 		Users user = new Users();
 		user.setEmail("test2@test.com");
 		ResponseEntity<?> response = loginController.resetPassword(user);
-		assert response.getStatusCode() == HttpStatus.OK;
+		assertTrue(response.getStatusCode() == HttpStatus.OK);
 	}
 	
 	@Test
@@ -145,6 +145,6 @@ class UsersApplicationTests {
 		});
 		String expectedMessage = "mail address not found in our system.";
 		String actualMessage = exception.getMessage();
-		assert actualMessage.contains(expectedMessage) == true;
+		assertTrue(actualMessage.contains(expectedMessage));
 	}
 }

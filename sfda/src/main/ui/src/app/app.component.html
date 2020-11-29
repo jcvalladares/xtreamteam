@@ -17,11 +17,15 @@
             <label for="inputLastName">Last Name</label>
             <input type="text" class="form-control" formControlName="lastName" id="inputLastName" aria-describedby="lastNameHelp" placeholder="Last Name">
           </div>
+          <div class="form-group col-md-6">
+            <label for="inputPhone">Phone</label>
+            <input type="tel" class="form-control" formControlName="phone" id="inputPhone" aria-describedby="phoneHelp" placeholder="123-456-7890">
+          </div>
         </div>
         <div class="row">
           <div class="form-group col-md-6">
             <label for="inputEmail">Email/UserName</label>
-            <input type="text" class="form-control" formControlName="email" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
+            <input type="email" class="form-control" formControlName="email" id="inputEmail" aria-describedby="emailHelp" placeholder="Email">
           </div>
           <div class="form-group col-md-6">
             <label for="inputPassword">Password</label>
@@ -52,8 +56,7 @@
     <div class="col-md-4 mrgnbtm">
       <app-display-board
        [userCount]="userCount"
-       (getUsersEvent)="getAllUsers()"
-      >
+       (getUsersEvent)="getAllUsers()">
       </app-display-board>
     </div>
   </div>
