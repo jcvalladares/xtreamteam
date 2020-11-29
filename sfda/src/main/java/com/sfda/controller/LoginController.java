@@ -34,6 +34,7 @@ public class LoginController {
 	@PostMapping(path = UserLinks.LOGIN_USER)
 	public @ResponseBody Users loginUser(String email, String password) {
 		log.info("In loginUser");
+//		usersService.findUserById(email);
 		Users users = new Users();
 		users.setId(12345);
 		users.setFirstName("Joe");
