@@ -1,5 +1,6 @@
 package com.sfda.users;
 
+import static org.junit.Assert.assertTrue;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,10 +27,6 @@ class UsersApplicationTests {
 	UsersController userController;
 
 	@Test
-	void contextLoads() {
-	}
-
-	@Test
     public void junitWorksProperly(){
         assert true;
     }
@@ -41,6 +38,9 @@ class UsersApplicationTests {
 		user1.setFirstName("SFDA_Test1");
 		user1.setLastName("SFDA_Test_LastName1");
 		user1.setEmail("SFDA_Test1@test.com");
+		user1.setType("NGO");
+		user1.setIsValidated("Y");
+		user1.setIsQRCodeGenerated("Y");
 		ResponseEntity<?> response = userController.saveUser(user1);
 		assert response.getStatusCode() == HttpStatus.OK;
 	}
@@ -69,6 +69,9 @@ class UsersApplicationTests {
 		user.setFirstName("TestSecond32");
 		user.setLastName("TestLast232");
 		user.setEmail("test4342@test.com");
+		user.setType("DONOR");
+		user.setIsValidated("Y");
+		user.setIsQRCodeGenerated("Y");
 		ResponseEntity<?> response = loginController.registerUser(user);
 		assert response.getStatusCode() == HttpStatus.OK;
 	}
@@ -90,15 +93,14 @@ class UsersApplicationTests {
 		user.setFirstName("TestSecond3");
 		user.setLastName("TestLast24");
 		user.setEmail("test332@test.com");
-	//	ResponseEntity<?> response = loginController.loginUser(user);
-	//	assert response.getStatusCode() == HttpStatus.OK;
+		Users response = loginController.loginUser("abc@xyz.com", "abcd");
+		assertTrue(response != null);
 	}
 	
 	@Test
 	public void testUnSuccessfulUserLoginScenario() {
-		Users user = new Users();
-	//	ResponseEntity<?> response = loginController.loginUser(user);
-	//	assert response.getStatusCode() == HttpStatus.OK;
+		Users response = loginController.loginUser(null, "abcd");
+		assertTrue(response != null);
 	}
 	
 	@Test
@@ -140,5 +142,4 @@ class UsersApplicationTests {
 		String actualMessage = exception.getMessage();
 		assert actualMessage.contains(expectedMessage) == true;
 	}
-	
 }

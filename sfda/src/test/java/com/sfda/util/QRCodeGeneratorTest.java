@@ -55,7 +55,7 @@ class QRCodeGeneratorTest {
 		hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
 		BitMatrix matrix = codeGenerator.createQRCode(qrGeneratorCode, charset, hintMap, 250, 250);
 		// save the QR code
-		codeGenerator.saveQRCode(matrix, "src/test/resources/QRCode.png");
+		codeGenerator.saveQRCode(matrix, "QRCode.png");
 
 		// now try to decode the QR code for validity
 		BinaryBitmap binaryBitmap = new BinaryBitmap(new HybridBinarizer(
@@ -77,9 +77,9 @@ class QRCodeGeneratorTest {
 		hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
 		BitMatrix matrix = codeGenerator.createQRCode(qrGeneratorCode, charset, hintMap, 250, 250);
 		// save the QR code
-		codeGenerator.saveQRCode(matrix, "src/test/resources/QRCode.png");
+		codeGenerator.saveQRCode(matrix, "QRCode.png");
 
-		assertTrue(ImageIO.read(new FileInputStream("src/test/resources/QRCode.png")) != null);
+		assertTrue(ImageIO.read(new FileInputStream("QRCode.png")) != null);
 	}
 
 	@Test
