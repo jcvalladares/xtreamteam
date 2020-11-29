@@ -23,14 +23,21 @@ public class Users {
     private String firstName;
     
     @Column
+    private String middleName;
+    
+    @Column
     @NotNull(message="{NotNull.User.lastName}")
     private String lastName;
+    
+    @Column
+    @NotNull(message="{NotNull.User.password}")
+    private String password;
     
     @Column
     @NotNull(message="{NotNull.User.email}")
     private String email;
     
-    @Column
+    @Column(name = "TYPE")
     private String type;
     
     @Column(name = "VALIDITY_IND")
