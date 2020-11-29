@@ -17,8 +17,10 @@ export class AppComponent implements OnDestroy {
 
   userForm = new FormGroup({
     firstName: new FormControl('', Validators.nullValidator && Validators.required),
+    middleName: new FormControl('', Validators.nullValidator),
     lastName: new FormControl('', Validators.nullValidator && Validators.required),
     email: new FormControl('', Validators.nullValidator && Validators.required),
+	password: new FormControl('', Validators.nullValidator && Validators.required),
 	birthDate: new FormControl('', Validators.nullValidator),
 	type: new FormControl('USER', Validators.nullValidator),
 	isValidated: new FormControl('N', Validators.nullValidator),

@@ -20,5 +20,4 @@ public class UserDetailsValidator {
 	public boolean isQRGenertedForUser(Users users) {
 		return isValidAdultUser(users) && "Y".equalsIgnoreCase(users.getIsQRCodeGenerated());
 	}
-
 }
