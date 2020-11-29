@@ -59,7 +59,7 @@ class QRCodeGeneratorTest {
 
 		// now try to decode the QR code for validity
 		BinaryBitmap binaryBitmap = new BinaryBitmap(new HybridBinarizer(
-				new BufferedImageLuminanceSource(ImageIO.read(new FileInputStream("src/test/resources/QRCode.png")))));
+				new BufferedImageLuminanceSource(ImageIO.read(new FileInputStream("QRCode.png")))));
 		Result qrCodeResult = new MultiFormatReader().decode(binaryBitmap);
 		String actualQrCode = qrCodeResult.getText();
 		String expectedQrCode = "SFDA_Test";
