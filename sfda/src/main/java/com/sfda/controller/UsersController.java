@@ -44,10 +44,10 @@ public class UsersController {
 	public ResponseEntity<?> saveUser(@RequestBody Users user) {
 		log.info("UsersController:  list users");
 		Users resource = null;
-		if(UserDetailsValidator.isValidEmail(user.getEmail()) && UserDetailsValidator.isValidPhone(user.getPhone())) {
+		//if(UserDetailsValidator.isValidEmail(user.getEmail()) && UserDetailsValidator.isValidPhone(user.getPhone())) {
 			user.setPhone(user.getPhone().replaceAll("[-, ]", ""));
 			resource = usersService.saveUser(user);
-		}
+		//}
 		return ResponseEntity.ok(resource);
 	}
 	

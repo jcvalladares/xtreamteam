@@ -30,10 +30,10 @@ public class LoginController {
 	public ResponseEntity<?> registerUser(@RequestBody Users user) {
 		log.info("In LoginController#registerUser");
 		Users registeredUser = null;
-		if(UserDetailsValidator.isValidEmail(user.getEmail()) && UserDetailsValidator.isValidPhone(user.getPhone())) {
+		//if(UserDetailsValidator.isValidEmail(user.getEmail()) && UserDetailsValidator.isValidPhone(user.getPhone())) {
 			user.setPhone(user.getPhone().replaceAll("[-, ]", ""));
 			registeredUser = usersService.saveUser(user);
-		}
+		//}
 		return ResponseEntity.ok(registeredUser);
 	}
 
@@ -41,19 +41,19 @@ public class LoginController {
 	public @ResponseBody Users loginUser(@ModelAttribute("email") String email, String password) {
 		log.info("In LoginController#loginUser");
 		Users loggedInUser = null;
-		if(UserDetailsValidator.isValidEmail(email)) {
+		//if(UserDetailsValidator.isValidEmail(email)) {
 			loggedInUser = usersService.findUserById("Juan@Valladares.com", "xtreamteam!5");
 			log.info("User " + loggedInUser.getFirstName() + " " + loggedInUser.getLastName() + " is logged in now.");
-		}
+		//}
 		return loggedInUser;
 	}
 
 	@PostMapping(path = UserLinks.FORGET_PASSWORD)
 	public ResponseEntity<?> resetPassword(@RequestBody Users user) {
 		log.info("In LoginController#resetPassword");
-		if(UserDetailsValidator.isValidEmail(user.getEmail())) {
+		//if(UserDetailsValidator.isValidEmail(user.getEmail())) {
 			usersService.resetPassword(user);
-		}
+		//}
 		return ResponseEntity.ok("Link Sent");
 	}
 }
