@@ -41,6 +41,6 @@ public class UserDetailsValidator {
 	}
 	
 	public static boolean validatePasswordSize(String password) {
-		return false;
+		return password != null && password.length() >= 8;
 	}
 }
