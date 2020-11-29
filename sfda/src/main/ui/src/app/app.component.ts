@@ -20,6 +20,7 @@ export class AppComponent implements OnDestroy {
     middleName: new FormControl('', Validators.nullValidator),
     lastName: new FormControl('', Validators.nullValidator && Validators.required),
     email: new FormControl('', Validators.nullValidator && Validators.required),
+	phone: new FormControl('', Validators.nullValidator),
 	password: new FormControl('', Validators.nullValidator && Validators.required),
 	birthDate: new FormControl('', Validators.nullValidator),
 	type: new FormControl('USER', Validators.nullValidator),
