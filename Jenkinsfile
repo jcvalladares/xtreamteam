@@ -23,9 +23,17 @@ pipeline {
                 script {    
                         bat "${env.M2_HOME}/bin/mvn -f ${env.WORKSPACE}/sfda/pom.xml clean install"
                 }
-
             }
         }
+        
+      stage('Deploy ') {
+            steps {
+                script {    
+                        bat "${env.M2_HOME}/bin/mvn -f ${env.WORKSPACE}/sfda/restartApp.bat
+                }
+            }
+        }
+   
 
       }
      
