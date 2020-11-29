@@ -12,6 +12,7 @@ import org.springframework.transaction.TransactionSystemException;
 import com.sfda.controller.LoginController;
 import com.sfda.controller.UsersController;
 import com.sfda.entity.Users;
+import com.sfda.repository.UsersLoginRepository;
 import com.sfda.repository.UsersRepository;
 import com.sfda.service.UsersService;
 
@@ -38,6 +39,7 @@ class UsersApplicationTests {
 		user1.setFirstName("SFDA_Test1");
 		user1.setLastName("SFDA_Test_LastName1");
 		user1.setEmail("SFDA_Test1@test.com");
+		user1.setPassword("password");
 		user1.setType("NGO");
 		user1.setIsValidated("Y");
 		user1.setIsQRCodeGenerated("Y");
@@ -69,6 +71,7 @@ class UsersApplicationTests {
 		user.setFirstName("TestSecond32");
 		user.setLastName("TestLast232");
 		user.setEmail("test4342@test.com");
+		user.setPassword("password");
 		user.setType("DONOR");
 		user.setIsValidated("Y");
 		user.setIsQRCodeGenerated("Y");
@@ -106,7 +109,8 @@ class UsersApplicationTests {
 	@Test
 	public void testExceptionScenarioWhenDatabaseIsDown() {
 		UsersRepository usersRepository = Mockito.mock(UsersRepository.class);
-		UsersService service = new UsersService(usersRepository);
+		UsersLoginRepository usersLoginRepository = Mockito.mock(UsersLoginRepository.class);
+		UsersService service = new UsersService(usersRepository, usersLoginRepository);
 		LoginController mockLoginController = new LoginController(service);
 	    Mockito.when(usersRepository.save(Mockito.any())).thenThrow(new RuntimeException("Database is down."));
 	    Users user = new Users();
@@ -130,7 +134,8 @@ class UsersApplicationTests {
 	@Test
 	public void testResetPasswordLinkExceptionScenario() {
 		UsersRepository usersRepository = Mockito.mock(UsersRepository.class);
-		UsersService service = new UsersService(usersRepository);
+		UsersLoginRepository usersLoginRepository = Mockito.mock(UsersLoginRepository.class);
+		UsersService service = new UsersService(usersRepository, usersLoginRepository);
 		LoginController mockLoginController = new LoginController(service);
 	    Mockito.when(usersRepository.findAll()).thenThrow(new RuntimeException("Email address not found in our system."));
 	    Users user = new Users();
