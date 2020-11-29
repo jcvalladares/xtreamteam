@@ -11,7 +11,7 @@ pipeline {
        
         stage('SFDA Workflow Engine Code Checkout') {
             steps {
-                echo "Cleaning the workspace before checkout"  
+                echo "Cleaning workspace before checkout"  
                 cleanWs()
                 git branch: "main", credentialsId: 'sfdaPipe', url: 'https://github.com/jcvalladares/xtreamteam.git'
             }
