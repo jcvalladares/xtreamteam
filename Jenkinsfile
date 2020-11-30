@@ -47,5 +47,6 @@ node {
 	    stage("Post Deployment Check") {
 		    def ret_code = sh(script: "curl -s -o /dev/null -w '%{http_code}' http://54.219.4.96:8080/", returnStdout: true).trim()
 		    echo ret_code
+		    sh "exit 0"
 	    }
 }
