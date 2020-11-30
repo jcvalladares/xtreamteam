@@ -8,4 +8,5 @@ public class UserLinks {
     public static final String LOGIN_USER = "/login";
     public static final String FORGET_PASSWORD = "/forgetpassword";
     public static final String CREATE_QR = "/create_qr";
+    public static final String GET_QR = "/get_qr";
 }

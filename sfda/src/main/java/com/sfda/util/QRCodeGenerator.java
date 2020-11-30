@@ -1,5 +1,6 @@
 package com.sfda.util;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
@@ -22,9 +23,12 @@ public class QRCodeGenerator {
 				BarcodeFormat.QR_CODE, qrWidth, qrHeight, hintMap);
 	}
 
-	public void saveQRCode(BitMatrix matrix, String filePath) throws WriterException, IOException {
+	public static BufferedImage saveQRCode(BitMatrix matrix, String filePath) throws WriterException, IOException {
 		MatrixToImageConfig config = new MatrixToImageConfig();
+		if (filePath == "" || filePath == null)
+			return MatrixToImageWriter.toBufferedImage(matrix);
 		MatrixToImageWriter.writeToPath(matrix, filePath.substring(filePath.lastIndexOf('.') + 1),
 				new File(filePath).toPath(), config);
+		return null;
 	}
 }
