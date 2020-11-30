@@ -32,6 +32,12 @@ node {
 	    }
 
 	    stage('Deploy Docker Image') {
+			// Sanity check
+			when {
+				 expression {
+						return params.Deploy == 'Yes'
+				 }
+			 }
 				// deploy docker image to nexus
 				echo "Docker Image Tag Name: ${dockerImageTag}"
 				try {
@@ -43,4 +49,3 @@ node {
 				sh "docker run --name sfdadocker -d -p 8080:8080 sfdadocker:${env.BUILD_NUMBER}"
 			}
 		}
-
