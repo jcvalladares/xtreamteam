@@ -36,7 +36,7 @@ pipeline {
             steps {
                 script {    
                        echo "Stopping Curring Instance"
-                       sh "jps -v  | grep sfda-0.0.1-SNAPSHOT.jar | awk '{print $1}'|xargs kill -9"
+                       sh "jps -v  | grep sfda-0.0.1-SNAPSHOT.jar | awk '{print "\$1"}'|xargs kill -9"
                        echo "Starting New Instance"
                        sh "/usr/bin/java -jar ${env.WORKSPACE}/sfda/target/sfda-0.0.1-SNAPSHOT.jar"
                        echo "Deployment Successful"
