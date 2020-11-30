@@ -36,7 +36,7 @@ node {
 
 	    stage('Deploy Docker Image') {
 			// Sanity check
-			if params.Deploy == 'Yes' {
+			if (params.Deploy == 'Yes')
 				// deploy docker image to nexus
 				echo "Docker Image Tag Name: ${dockerImageTag}"
 				try {
