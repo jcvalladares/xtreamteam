@@ -166,7 +166,7 @@
 
 ###### RUBRIC: Continuous Delivery: You have a Continuous Delivery system running. When the build is &quot;green&quot;, the CD system deploys your software to a production environment (&quot;Production&quot;); when the build is &quot;red&quot;, the CD system doesn&#39;t alter Production. The CD system executes additional tests of your software in Production to ensure Production is up and running successfully after deployment. You have provided evidence that your CD system exists and behaves properly
 
-#### Our CD Pipeline also executes within Jenkins. Our pipeline contains a parameter that allows the user to indicate if it wants to deploy the application to production. If the user indicates they want the pipeline deployed, the &#39;Deploy&#39; section of the Jenkins script is run and the application is dockerized and &quot;deployed to production&quot;. In addition, we add an additional environment test (via a curl command) to confirm everything was deployed properly.
+#### Our CD Pipeline also executes within Jenkins. Our pipeline contains a parameter that allows the user to indicate if it wants to deploy the application to production.  If the user indicates a deployment is needed (green), they deploy section will run along with an additional environment tests. If the user does not indicate this (red), it will not run.
 
 ![Pipeline Picture](images/PIPELINE.png)
 
@@ -176,7 +176,7 @@
 #### Login: team3
 #### Password: Xtreme123!
 
-#### For our production environment, we are Dockerizing the application to a new container. If the user indicates a deployment is needed (green), they deploy section will run along with an additional test. If the user does not indicate this (red), it will not run.
+#### For our production environment, we are Dockerizing the application to a new container.
 
 ###### RUBRIC: Sprint Retrospective: Your team conducts a Sprint Retrospective. All team members participate in the sprint retrospective. As a team, you identify at least one helpful change to improve your effectiveness together. You make a concrete plan for making that change during the next sprint. (Provide evidence. 1 point for each sentence in this rubric element.)
 
