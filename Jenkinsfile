@@ -31,7 +31,7 @@ pipeline {
             steps {
                 echo "Attempting to deploy"
                 script {    
-                        sh "${env.M2_HOME}/bin/java -jar ${env.WORKSPACE}/sfp-build-pipeline/sfda/target/sfda-0.0.1-SNAPSHOT.jar"
+                        sh "usr/bin/java -jar ${env.WORKSPACE}/sfp-build-pipeline/sfda/target/sfda-0.0.1-SNAPSHOT.jar"
                 }
 
             }
