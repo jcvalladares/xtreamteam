@@ -105,6 +105,8 @@
 
 ###### Test-Driven Development: There is evidence that you are building your product test-first. There are at least 20 micro-scale unit tests in your test suite, and they all pass. (1 point for each \*new\* unit test that you created in this sprint, up to a maximum of 10 points)
 
+![JUnis Execution](images/junits_sprint2.png)
+
 #### Our application contains over 20 tests. The last sprint we lost points because the tests were written after the code and did not cover all of the functionality. This Sprint, we did things differently by writing our tests before coding and creating micro tests to explore individual functionalities like form validation. Our tests are in three separate files and can be found at:
 
 #### [https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/UsersApplicationTests.java](https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/UsersApplicationTests.java)
