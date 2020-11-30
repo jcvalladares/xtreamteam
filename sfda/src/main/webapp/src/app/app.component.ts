@@ -1,3 +1,4 @@
+import { Config } from './shared/Config';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,12 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'WebApp';
-  url = "http://localhost:8080/api/get_qr?email=Juan@Valladares.com";
-  // get IsLoggedIn(): Boolean {
-  //   return localStorage.getItem('token')!= '' ;
-  // }
+  url = this.config.getQrCodeUrl;
+
   get IsLoggedIn(): boolean {
     return localStorage.getItem('token') !== null;
   }
-
+  constructor(private config: Config){}
 }
