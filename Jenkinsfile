@@ -28,16 +28,8 @@ node {
 	    }
 
 	    stage('Build Docker Image') {
-		    when {
-			    expression { 
-                      		return params.Deploy == 'Yes'
-                            }
-                    }
-		    steps {
-		    	  // build docker image
-			    echo "Docker Image Build"
-			    dockerImage = docker.build("sfdadocker:${env.BUILD_NUMBER}")
-		    }
+		    // build docker image from jar
+		    dockerImage = docker.build("sfdadocker:${env.BUILD_NUMBER}")
 	    }
 	
 	    stage('Sanity Check') {
