@@ -92,7 +92,7 @@
 ![Task 1 Before](images/TASK1_BEFORE.png)
 ![Task 1 After](images/TASK1_AFTER.png)
 ![Task 2 Before](images/TASK2_BEFORE.png)
-![Task 2 Before](images/TASK2_BEFORE.png)
+![Task 2 Before](images/TASK2_AFTER.png)
 
 ###### Pair- or Mob-Programming: There is evidence that you paired or mobbed on your code. The evidence could be a photo or video of your team working together, or it could be some other kind of evidence. The evidence is included in your README. (1 point for each team member who participated, up to a maximum of 5 points)
 
