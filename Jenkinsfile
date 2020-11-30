@@ -1,4 +1,3 @@
-#!groovy
 
 node {
 
@@ -15,24 +14,16 @@ node {
 
 
 	    stage('SFDA Workflow Engine Code Checkout') { // for display purposes
-				{
-					steps {
-							echo "Cleaning the workspace before checkout"
-							cleanWs()
-							git branch: "main", credentialsId: 'sfdaPipe', url: 'https://github.com/jcvalladares/xtreamteam.git'
-					}
-				}
+				echo "Cleaning the workspace before checkout"
+				cleanWs()
+				git branch: "main", credentialsId: 'sfdaPipe', url: 'https://github.com/jcvalladares/xtreamteam.git'
 	      // Get the Maven tool.
 	      mvnHome = tool 'Maven3.6.3'
 	    }
 
 	    stage('Code Build and Unit Test suite') {
 	      // build project via maven
-				steps {
-						script {
-										sh "${env.M2_HOME}/bin/mvn -f ${env.WORKSPACE}/sfda/pom.xml clean install"
-						}
-				}
+				sh "${env.M2_HOME}/bin/mvn -f ${env.WORKSPACE}/sfda/pom.xml clean install"
 			}
 
 	    stage('Build Docker Image') {
@@ -53,4 +44,4 @@ node {
 		  sh "docker run --name sfdadocker -d -p 8080:8080 sfdadocker:${env.BUILD_NUMBER}"
 
 	    }
-}
+		}
