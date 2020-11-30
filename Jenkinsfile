@@ -27,6 +27,11 @@ pipeline {
         }
         
       stage('Deploy ') {
+          when {
+                   expression { 
+                      return params.Deploy == 'Yes'
+                   }
+          }
             steps {
                 script {    
                         bat "C:\\nssm-2.24\\nssm-2.24\\win64\\restartApp.bat"
