@@ -34,8 +34,13 @@ node {
 	    stage('Deploy Docker Image') {
 				// deploy docker image to nexus
 				echo "Docker Image Tag Name: ${dockerImageTag}"
-				sh "docker stop sfdadocker"
-				sh "docker rm sfdadocker"
+				try {
+					sh "docker stop sfdadocker"
+					sh "docker rm sfdadocker"
+				} catch (Exception e) {
+					echo 'Exception occurred: ' + e.toString()
+				}
 				sh "docker run --name sfdadocker -d -p 8080:8080 sfdadocker:${env.BUILD_NUMBER}"
 			}
 		}
+
