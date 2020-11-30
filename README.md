@@ -29,7 +29,7 @@
 
 ###### RUBRIC: You pulled stories from the top of your product backlog.
 
-### Our Sprint Backlog includes the next three items on our Product Backlog.
+#### Our Sprint Backlog includes the next three items on our Product Backlog.
 
 ###### RUBRIC: The aggregate size of the stories does not exceed your forecast.
 
