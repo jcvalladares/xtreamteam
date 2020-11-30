@@ -1,9 +1,9 @@
+#!groovy
 
 node {
 
 	    // reference to maven
 	    def mvnHome = tool 'Maven3.6.3'
-
 
 	    // holds reference to docker image
 	    def dockerImage
@@ -31,17 +31,11 @@ node {
 	      dockerImage = docker.build("sfdadocker:${env.BUILD_NUMBER}")
 	    }
 
-	    stage('Deploy Docker Image'){
-
-	      // deploy docker image to nexus
-
-	      echo "Docker Image Tag Name: ${dockerImageTag}"
-
-		  sh "docker stop sfdadocker"
-
-		  sh "docker rm sfdadocker"
-
-		  sh "docker run --name sfdadocker -d -p 8080:8080 sfdadocker:${env.BUILD_NUMBER}"
-
-	    }
+	    stage('Deploy Docker Image') {
+				// deploy docker image to nexus
+				echo "Docker Image Tag Name: ${dockerImageTag}"
+				sh "docker stop sfdadocker"
+				sh "docker rm sfdadocker"
+				sh "docker run --name sfdadocker -d -p 8080:8080 sfdadocker:${env.BUILD_NUMBER}"
+			}
 		}
