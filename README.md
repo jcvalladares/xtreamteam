@@ -17,7 +17,7 @@
 
 #### For our Sprint Goal, we estimate that we will be able to complete 50 points.
 
-######The rationale for your forecast is documented in your README
+###### The rationale for your forecast is documented in your README
 
 #### Last Sprint, we estimated 75 story points but were only able to complete about a little over half. Since our time-constraints are similar for this next we are estimating 50 points this Sprint.
 
@@ -73,7 +73,9 @@
 
 ###### You have a sprint burndown chart. On the x-axis, you display time markers in units of 1 day. On the y-axis, you display story points remaining to get done. There is a linear curve descending from left to right; the leftmost point of the curve is number of story points in your sprint at sprint day 1; the rightmost point is 0 story points remaining on the last day of the sprint. The burndown chart, or the URL of the burndown chart, is document in your README. Course staff can view the burndown chart. (1 point for each sentence you complete)
 
-#### For our Sprint Burndown Chart we decided to use an excel spreadsheet. To do this, we adapted it from a template that we found a website called coria.com (Full URL: https://www.coria.com/insights/blog/project-management/how-to-create-a-burndown-chart-in-excel)
+#### For our Sprint Burndown Chart we decided to use an excel spreadsheet. To do this, we adapted it from a template that we found a website called coria.com (Full URL: https://www.coria.com/insights/blog/project-management/how-to-create-a-burndown-chart-in-excel). The a pdf title Sprint2_Burdown is located in the Repo. Also, a picture is attached:
+
+![Sprint2 Burndown](images/SPRINT2_BURNDOWN_CHART.png)
 
 ###### Daily Scrum: You have conducted multiple Daily Scrums. You document evidence of at least one daily scrum in your README your daily scrums, you discussed: what did you do in the last 24 hours that helped the Development Team meet the Sprint Goal? In your README, document which team members did which activities. (1 point for each team member&#39;s response, up to a maximum of 5 points)
 
