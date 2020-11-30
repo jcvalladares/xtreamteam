@@ -1,6 +1,9 @@
-<button type="button" class="btn btn-primary" data-toggle="modal"  data-target="#exampleModalLong">
-  Login
+<button type="button" class="btn btn-primary" data-toggle="modal" [hidden]="IsLoggedIn" data-target="#exampleModalLong" >
+ Login
 </button>
+<button type="button" class="btn btn-primary" data-toggle="modal" [hidden]="!IsLoggedIn" data-target="#exampleModalLong" >
+  Logout
+ </button>
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
   <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
     aria-hidden="true">
@@ -21,11 +24,14 @@
             <div class="form-group">
               <input class="form-control" formControlName="password" placeholder="Password" type="password">
             </div>
+            <div class="alert alert-primary" [hidden]="errorMessage === ''" role="alert">
+              {{errorMessage}}
+            </div>
           </fieldset>
 
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Login</button>
+          <button type="submit" class="btn btn-primary"   >Login</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>

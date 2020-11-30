@@ -9,16 +9,12 @@ import { IUser } from '../shared/IUser';
 })
 
 @Injectable()
-export class LoginService{
-
-  public Login(email: string, password: string): Observable<IUser> {
-    let body = JSON.stringify({ 'email': email, "password": password });
-    let headers = new Headers({ 'Content-Type': 'application/json'});
-    let options = {body: body, Headers: headers};
+export class LoginService {
+ public Login(email: string, password: string): Observable<IUser> {
+    const body = JSON.stringify({ email, password });
+    const headers = new Headers({ 'Content-Type': 'application/json'});
+    const options = {body, Headers: headers};
     return this.http.post<IUser>(this.config.loginUrl, options);
-
      }
   constructor(private http: HttpClient, private config: Config) { }
 }
-
-
