@@ -23,7 +23,7 @@ node {
 
 	    stage('Code Build and Unit Test suite') {
 	      // build project via maven
-				sh "${env.M2_HOME}/bin/mvn -f ${env.WORKSPACE}/sfda/pom.xml clean install"
+				sh "'${mvnHome}/bin/mvn' -f ${env.WORKSPACE}/sfda/pom.xml clean install"
 			}
 
 	    stage('Build Docker Image') {
