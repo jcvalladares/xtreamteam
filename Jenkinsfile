@@ -44,4 +44,11 @@ node {
 		    }
 		    sh "docker run --name sfdadocker -d -p 8080:8080 sfdadocker:${env.BUILD_NUMBER}"
 	    }
+	    stage("Post Deployment Check") {
+		    script {
+			    final String url = "http://54.219.4.96:8080/"
+			    final String response = sh(script: "curl -s $url", returnStdout: true).trim()
+			    echo response
+		    }
+	    }
 }
