@@ -173,14 +173,10 @@
 #### Our pipeline can be found on the Jenkins Instance:
 
 #### URL: [http://54.219.4.96:8081/](http://54.219.4.96:8081/)
-
 #### Login: team3
-
 #### Password: Xtreme123!
 
-#### Our production environment is not yet online, so imitate a production deployment we are re-running the .jar file.
-
-#### Additionally, we have the CD pipeline fully functioning locally. More details can be found at:
+#### For our production environment, we are Dockerizing the application to a new container. If the user indicates a deployment is needed (green), they deploy section will run along with an additional test. If the user does not indicate this (red), it will not run.
 
 ###### RUBRIC: Sprint Retrospective: Your team conducts a Sprint Retrospective. All team members participate in the sprint retrospective. As a team, you identify at least one helpful change to improve your effectiveness together. You make a concrete plan for making that change during the next sprint. (Provide evidence. 1 point for each sentence in this rubric element.)
 
