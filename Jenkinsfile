@@ -26,6 +26,19 @@ pipeline {
 
             }
         }
+   
+         stage('Deploy ') {
+          when {
+                   expression { 
+                      return params.Deploy == 'Yes'
+                   }
+          }
+            steps {
+                script {    
+                       echo "Deployment Done"
+                }
+            }
+        }
 
       }
      
