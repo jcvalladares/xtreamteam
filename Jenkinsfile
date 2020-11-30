@@ -28,9 +28,16 @@ node {
 	    }
 
 	    stage('Build Docker Image') {
-		    // build docker image
-		    echo "Docker Image Build"
-		    dockerImage = docker.build("sfdadocker:${env.BUILD_NUMBER}")
+		    when {
+			    expression { 
+                      		return params.Deploy == 'Yes'
+                            }
+                    }
+		    steps {
+		    	  // build docker image
+			    echo "Docker Image Build"
+			    dockerImage = docker.build("sfdadocker:${env.BUILD_NUMBER}")
+		    }
 	    }
 
 	    stage('Deploy Docker Image') {
