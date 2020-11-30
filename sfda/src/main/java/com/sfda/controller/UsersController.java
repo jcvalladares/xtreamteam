@@ -72,8 +72,7 @@ public class UsersController {
 	public ResponseEntity<?> getQRCode(@ModelAttribute("email") String email) {
 		log.info("UsersController#get QRCode");
 		try {
-			Users user = null;
-			user = usersService.findUser(email);
+			Users user = usersService.findUser(email);
 			Map<EncodeHintType, ErrorCorrectionLevel> hintMap = new HashMap<EncodeHintType, ErrorCorrectionLevel>();
 			hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
 			BitMatrix matrix = QRCodeGenerator.createQRCode(user.getEmail(), "UTF-8", hintMap, 250, 250);
@@ -82,6 +81,7 @@ public class UsersController {
 			ImageIO.write(img, "jpeg", bao);
 			HttpHeaders responseHeaders = new HttpHeaders();
 			responseHeaders.add("Content-Type", "img/jpeg");
+			user.setIsQRCodeGenerated("Y");
  			return new ResponseEntity<byte[]>(bao.toByteArray(), responseHeaders, HttpStatus.OK);
 		} catch (WriterException | IOException e) {
 			e.printStackTrace();
