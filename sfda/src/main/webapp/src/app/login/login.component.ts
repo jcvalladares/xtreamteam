@@ -17,6 +17,12 @@ export class LoginComponent implements OnInit {
   }
 
   public errorMessage = '';
+  ShowLogin()
+  {
+    localStorage.removeItem('token');
+    $('#exampleModalLong').modal();
+
+  }
 
   loginForm = new FormGroup({
     login: new FormControl(''),
@@ -40,12 +46,14 @@ export class LoginComponent implements OnInit {
         .subscribe((token: IUser) => {
           // this.token = token;
           localStorage.setItem('token', '1');
+          $('#exampleModalLong').modal('hide');
         }, (error) => {
           localStorage.removeItem('token');
+
           this.errorMessage = 'User and Password Incorrect';
+
         });
-    //}
-  }
+   }
 
   constructor(private loginServices: LoginService) { }
 

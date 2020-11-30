@@ -14,7 +14,7 @@ export class LoginService {
     const body = JSON.stringify({ email, password });
     const headers = new Headers({ 'Content-Type': 'application/json'});
     const options = {body, Headers: headers};
-    return this.http.post<IUser>(this.config.loginUrl, options);
+    return this.http.post<IUser>(this.config.loginUrl + '?email=' + email + '&password=' + password, options);
      }
   constructor(private http: HttpClient, private config: Config) { }
 }

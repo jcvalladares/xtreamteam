@@ -6,7 +6,20 @@
     </div>
     <!-- <div class="p-2"><app-singup></app-singup></div> -->
   </div>
-  <div class="container" >
+  <div class= "container"[hidden]="!IsLoggedIn">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome to Supply Food System</h1>
+      <p class="lead">We are committed to help you during this pandemic.</p>
+      <hr class="my-4">
+      <img src="{{url}}" alt="Italian Trulli"/>
+
+      <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p> -->
+    </div>
+  </div>
+  <div class="container"  [hidden]="IsLoggedIn">
     <div class="container">
       <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h1 class="display-4">Welcome</h1>
