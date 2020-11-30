@@ -12,6 +12,9 @@
 - **Anup Shetye**: Developer
 - **Manav Agarwal**: Developer
 
+#### Project URL: [http://54.219.4.96:8080/](http://54.219.4.96:8080/)
+#### Username: test@test.com
+#### Password: test
 
 ## Sprint Planning 11.21
 
@@ -107,7 +110,7 @@
 
 ###### RUBRIC: Test-Driven Development: There is evidence that you are building your product test-first. There are at least 20 micro-scale unit tests in your test suite, and they all pass. (1 point for each \*new\* unit test that you created in this sprint, up to a maximum of 10 points)
 
-![JUnis Execution](images/junits_sprint2.png)
+![JUnit Execution](images/junits_sprint2.png)
 
 #### Our application contains over 20 tests. The last sprint we lost points because the tests were written after the code and did not cover all of the functionality. This Sprint, we did things differently by writing our tests before coding and creating micro tests to explore individual functionalities like form validation. Our tests are in three separate files and can be found at:
 
@@ -123,7 +126,12 @@
 
 ###### RUBRIC: Your product increment is working software. The working software is running on a publicly accessible system (this could be a web server, a mobile app store, or something else.) Your README includes evidence that your product increment is working software. Your README includes the URL of the working software, an invitation to test the mobile app, etc. (1 point for each sentence in this rubric element)
 
-#### Our Product increment is working software. Evidence for this can be seen by accessing the application's URL at : [http://54.219.4.96:8080](http://54.219.4.96:8080/)
+#### Our Product increment is working software. Our application displays a unique QR code for each logged in user. Since we have not yet implemented registration, please log in with the uername and password provided below.
+
+#### Project URL: [http://54.219.4.96:8080/](http://54.219.4.96:8080/)
+#### Username: test@test.com
+#### Password: test
+
 
 ###### RUBRIC: At least one stakeholder attends your sprint review, and you provide evidence that your stakeholder was there. You revise your product backlog based on the feedback you receive. (1 point for each sentence in this rubric item)
 
@@ -137,25 +145,28 @@
 
 ![CI Pipeline Picture](images/CI_PIPELINE.png)
 
-#### To automatically build and test our code, our GitHub server uses a webhook to push events to our Jenkins instance. If an event is sent, it runs the Jenkinsfile in the server. Our Jenkins file can be found at [https://github.com/jcvalladares/xtreamteam/blob/main/Jenkinsfile](https://github.com/jcvalladares/xtreamteam/blob/main/Jenkinsfile) and runs the tests with the following command:
-
-#### sh "${env.M2\_HOME}/bin/mvn -f ${env.WORKSPACE}/sfda/pom.xml clean install""
-
-#### Evidence for our working pipeline can also be found on our Jenkins Instance (credentials below)
+#### Our pipeline is called sfp-build-pipeline and can be found on our Jenkins Instance (please log in with credentials below)
 
 #### URL: [http://54.219.4.96:8081/](http://54.219.4.96:8081/)
 
-#### Login: with team3
+#### Login: team3
 
 #### Password: Xtreme123!
 
-#### Also, latest pipeline's console output demonstrates that the pipeline builds the application and runs the tests. This can be found at the link below (test confirmation is toward the bottom of the output).
+#### To automatically build and test our code, our GitHub server uses a webhook to push events to our Jenkins instance. If an event is sent, it runs the Jenkinsfile in the server. A detailed log of the events can be found on our pipeline at [http://54.219.4.96:8081/job/sfp-build-pipeline/GitHubPollLog/](http://54.219.4.96:8081/job/sfp-build-pipeline/GitHubPollLog/). Also, the Jenkins file is in the repo and can be found at [https://github.com/jcvalladares/xtreamteam/blob/main/Jenkinsfile](https://github.com/jcvalladares/xtreamteam/blob/main/Jenkinsfile). The file runs the tests with the following command:
+
+#### sh "${env.M2\_HOME}/bin/mvn -f ${env.WORKSPACE}/sfda/pom.xml clean install""
+
+
+#### In addition, pipeline's console output will confirm that the pipeline builds the application and runs the tests. This can be found at the link below (test confirmation is toward the bottom of the output).
 
 #### [http://54.219.4.96:8081/job/sfp-build-pipeline/14/console](http://54.219.4.96:8081/job/sfp-build-pipeline/14/console)
 
+#### Also, the pipeline automatically generates a report of the tests. This can be found in [http://54.219.4.96:8081/job/sfp-build-pipeline/78/execution/node/3/ws/sfda/target/surefire-reports/](http://54.219.4.96:8081/job/sfp-build-pipeline/78/execution/node/3/ws/sfda/target/surefire-reports/)
+
 ###### RUBRIC: Continuous Delivery: You have a Continuous Delivery system running. When the build is &quot;green&quot;, the CD system deploys your software to a production environment (&quot;Production&quot;); when the build is &quot;red&quot;, the CD system doesn&#39;t alter Production. The CD system executes additional tests of your software in Production to ensure Production is up and running successfully after deployment. You have provided evidence that your CD system exists and behaves properly
 
-#### Our CD Pipeline also executes in Jenkins. Our pipeline contains a parameter that allows the user to determine if it wants to deploy the application to production. If the box is selected, the &#39;Deploy&#39; section of the Jenkins script is run and the application is &quot;deployed to production&quot;. In addition, we add an additional environment test (via a curl command) to confirm everything was deployed properly.
+#### Our CD Pipeline also executes within Jenkins. Our pipeline contains a parameter that allows the user to indicate if it wants to deploy the application to production. If the user indicates they want the pipeline deployed, the &#39;Deploy&#39; section of the Jenkins script is run and the application is dockerized and &quot;deployed to production&quot;. In addition, we add an additional environment test (via a curl command) to confirm everything was deployed properly.
 
 ![Pipeline Picture](images/PIPELINE.png)
 
@@ -163,7 +174,7 @@
 
 #### URL: [http://54.219.4.96:8081/](http://54.219.4.96:8081/)
 
-#### Login: with team3
+#### Login: team3
 
 #### Password: Xtreme123!
 
