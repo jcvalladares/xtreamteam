@@ -1,4 +1,4 @@
-[![Build Status](http://54.219.4.96:8081/job/sfp-build-pipeline/badge/icon?)]
+[![Build Status](http://54.219.4.96:8081/buildStatus/icon?job=sfp-build-pipeline)](http://54.219.4.96:8081/job/sfp-build-pipeline/)
 
 # Xtream Team
 # README - Sprint 2
