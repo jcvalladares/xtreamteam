@@ -1,4 +1,5 @@
 # Xtream Team
+# README - Sprint 2
 
 ### Project Name: Secure Food Distribution App
 
@@ -9,253 +10,231 @@
 - **Anup Shetye**: Developer
 - **Manav Agarwal**: Developer
 
-### Product Name: 
-The product is an open source using MIT licensed and it is called Supply Line Food.
 
-### Far Vision<br>
- Build a solution to distribute food in underdeveloped countries.
+## Sprint Planning 11.21
 
-### Near Vision Create an app that will build a basic framework for the far vision
-Create web app that connect donors, non-profit orgs, vendors and families in need using QRCode technology.
+Sprint Planning: You have a forecast of how many story points your team can complete during the sprint. The forecast is documented in your README.
 
-### Stakeholders:
-  
-  - **Non-Profit User**: This stakeholder is a member of a non-profit organization and it will use the app to orchestate the distribution of food in underdeveloped countries. 
+##### For our Sprint Goal, we estimate that we will be able to complete 50 points.
 
-  - **Mother of Family in need**: This stakeholder use the app to create an identify in the system. The Local non-profit will coordinate the food's distribuition and locate those families that require support using the app.
-  
-  - **Man - Donors**: This stakeholder provide the funds to finance the process. He will use the app to donate money to the non-profit organization using creditcards or transfer money or any possible mean.  
-  - **Groceries' Vendor**: Local vendors will give the groceries to the families in exchange of the funds received from the non-profit organization.  
+The rationale for your forecast is documented in your README
 
-  ### Real Person: 
-  
-Alejandra is a real person, is a mother of two, 31 years old who lives in Tegucigalpa, the capital city of Honduras. She works as office cleaner. Her husband work in construction. During the pandemic, both lost their jobs and have had difficulties to feed their family. Honduras, an underdeveloped country doesn’t have the resources to feed the whole country. This has been in lockdown since March and citizens can only leave their home once every 10 days. Some essential workers can go out, but they can’t because offices are closed, and construction work has been stopped. She has been struggling to feed her family and provide the basic needs. Food is one of the major issues due to the lack of job, money and they have to rely on some government assistance,  when it is possible, or non-profit such as churches or organizations that distribute food from time to time. Sometimes, they have to violate the lockdown to go out and look for groceries, or try to gain some money with temp jobs.
+##### Last Sprint, we estimated 75 story points but were only able to complete about a little over half. Since our time-constraints are similar for this next we are estimating 50 points this Sprint.
 
-### Real Stakeholder
+##### Our goal is to expand on our existing MVP. Last Sprint, we built an application that only contains a home page (the team decided the Home Page was the most essential part of the app because it allows the site to be found via search engines). In this coming sprint, we plan to create a login functionality, as well as a QR Code.
 
-The family in need is a stakeholder that will be using the app but, at the same time, receiving the resources donated by donors.  It will sign up to request financial support, and the Non-Profit organization will give the funds when this person passes a vetting process. This process is essential because they will receive groceries with a monetary value, and it is necessary to make sure that this stakeholder requires financial assistance. 
+You pulled stories into your sprint backlog.
 
-The beneficiary will have an ID in the system, and this ID is used to identify the individual and make sure that the same person requesting help is the same person who will receive the goods at the store.
- 
- 
-## Product Backlog
-We are using Jira to manage our backlog and it can be seen this address [Jira Backlog](https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=SFDA&view=planning&selectedIssue=SFDA-1&epics=visible&issueLimit=100)
+##### Our Sprint Backlog can be found at [https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&amp;projectKey=SFDA&amp;selectedIssue=SFDA-12](https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&amp;projectKey=SFDA&amp;selectedIssue=SFDA-12) and includes three product backlog items totaling 47 Story points.
 
-### Ordering
-<br>
-For Product Backlog ordering, we decided to first implement the signup functionality, then the login functionaly, then the core functionality and then the security. We determined that this order will allow us to properly test the application due to technical constraints. Specifically, the creating the signup and login first will allow us to build the technical framework to power the rest of the application.
-<br>
+You pulled stories from the top of your product backlog.
 
-## Definition of Ready
-Title: Secure Food Distribution Application
-User Story Opening Sentence: Given ... When ... Then ...
-Additional Details :  listed in the stakeholder information
-Acceptance Criteria: THe application should meet all criteria including all business logic and testing requirments. These Include:
-    - App should allow beneficiaries to sign up and receive an ID in the system and use QR Code technology to identify themselves in the system. ESTIMATION: 63
-    - App should allow donors to donate money to the organization. ESTIMATION: 37
-    - App should allow the Non-Profit organization to assign the money to each beneficiary. ESTIMATION: 50
-    - App should be reasonable Secure ESTIMATION: 13
-    - Contact Page that can be used by any visitor ESTIMATION: 5
+##### Our Sprint Backlog includes the next three items on our Product Backlog.
 
+The aggregate size of the stories does not exceed your forecast.
 
-### Estimation
-#### For Estimation, we used 'Planning Poker' to execute whole-team relative sized estimation. Only developers participated. We met as a group and estimated Story Point's with the following numbers : 1, 2, 3, 5, 8, 13, 21, 34, 55, 89. We discussed each item and determined a general approach as a team. Our conclusions were all unanimous and are listed below.
+##### Our forecast was 50, and the Aggregate Size of our stories are 47.
 
-#### EPIC: Signup Capability
-1. Signup capability for NPO - ESTIMATION 21
-2. Signup capability for Families - ESTIMATION 21
-3. Signup capability for Donors - ESTIMATION 21
-#### EPIC: Login Capability
-4. Login functionality for NPO - ESTIMATION: 8
-5. Login functionality for Families - ESTIMATION: 8
-6. Login functionality for Donors - ESTIMATION: 8
-#### EPIC: Core Functions
-7. Ability to retrieve QR Code For various roles ( stakeholders) - ESTIMATION: 21
-8. Unique QR Code should be assigned to Families - ESTIMATION: 13
-9. Donor should be able to donate money - ESTIMATION: 8
-9. NPO should be able to distribute funds - ESTIMATION: 21
-11. Contact Page/ Help form - ESTIMATION: 5
-#### EPIC: Security
-12. Implement basic web security practices - ESTIMATION: 13
-'
+Development Team members participated in this activity (and in your project README, you made a statement or provided evidence that only Development Team members participated in this activity). (1 point for each item)
 
+##### Only our Development team participated in the Sprint Planning Session.
 
+All of the stories in your sprint backlog are the right size: the size of each backlog item is less than half your forecast velocity for the sprint. If you noticed PBIs that are too large to get done in a sprint, you refined them by splitting them into smaller stories and estimating the smaller stories.
 
+##### We took some time to consider Backlog. Our PBI&#39;s were not too large, however we decided to refine our Product Backlog by creating a new PBI. We then modified the order of the backlog but did not need to change any of the existing PBIs.
 
-# PRODUCT BACKLOG (REVISED)
-Create Home Page: ESTIMATION 21
-Story: As an App User, I need to find the App through a search engine, and therefore need a home page to land on
-Acceptance Criteria: App is hosted on a web server and is serving a static webpage with basic SEO
+##### We have three user stories in our Sprint backlog. They are:
 
-Create QR Code : ESTIMATION 34
-Story: As a Family, I need to get QR Code online to be identified for Humanitarian Relief
-Acceptance Criteria: A page is created on the site that displays a unique QR Code every time is is loaded. A database is created to store each QR code and confirm unique ones are being generated
+##### Create QR Code : ESTIMATION 21
 
-Build Registration Page : ESTIMATION 34
-Story: As an app user, I need a page to register and login
-Acceptance Criteria: A page must be created that allow the user to register. Upon registration a confirmation email is created. Page layout follows home page design.  
+##### Story: As a Family, I need to get QR Code online to be identified for Humanitarian Relief
 
-Build Login Page : ESTIMATION 21
-Story: As an app user, I need a page to login
-Acceptance Criteria: A page must be created that allow the user to login. Login should not occur if username and password are not in database. Page layout follows home page design.  
+##### Acceptance Criteria: A page is created on the site that displays a unique QR Code every time is is loaded. A database is created to store each QR code and confirm unique ones are being generated
 
-Build View Profile Feature for Families : ESTIMATION 21
-Story: As a family, I need to be able to view my QR Code and current balance.
-Acceptance Criteria: App allows logged in users to view their account information. Page layout follows home page design.  
+##### Build Login Page : ESTIMATION 13
 
-Build Edit Profile Feature : ESTIMATION 21
-Story: As a family, I need to be able to edit my profile (in case of contact information change)
-Acceptance Criteria: Users can edit their account information on file
+##### Story: As an app user, I need a page to login
 
-Build Donor Page with Unique Account Information : ESTIMATION 21
-Story: As a donor, I need to be able to view my account information and view past donations
-Acceptance Criteria: Donors must be able to register and increase the amount of funds the NPO has access to
+##### Acceptance Criteria: A page must be created that allow the user to login. Login should not occur if username and password are not in database.
 
-Build NPO Page For Fund Distribution : ESTIMATION 21
-Story: As an NPO, I need to be able to register and login to distribute the donated funds to families. Page layout follows home page design.
-Acceptance Criteria: NPOs must be able to register and distribute the funds
+##### Remove Unnecessary Elements From Product Increment: ESTIMATION 13
 
-Build Vendor Page to Remove Funds from Family Accounts : ESTIMATION 21
-Story: As a Vendor, I need to be able to transfer money from the Fmailies Accounts to my own when I provide them goods
-Acceptance Criteria: Vendors can registarer and remove funds from a family's account according to the number on their QR Code
+##### User Story: As an app user (donor, family, NPO), I want the application to only contain working elements. Any unworking elements will diminish my confidence in the application.
 
-Build Contact and Support Page : ESTIMATION 13
-Story: As a App User (Families, NPO, Donors), I need to be able to contact someone with any questions about the app
-Acceptance Criteria: Page is created with contact form that emails contents of form to dedicated email addresss. Page layout follows home page design.  
+##### Acceptance Criteria: Home page should not contain and broken links and the Sign Up Page&#39;s validation should work or not be present.
 
-Web Security : ESTIMATION 34
-Story: As an App User, I need to know that my personal and financial data is secure
-Acceptance Criteria: app is password protected with authorization with https and passes basic security audit.
+You decomposed user stories into developer tasks (1 point). The tasks are clearly listed in your sprint backlog (1 point).
 
+##### We decomposed our user stories into developer tasks. These can be found on our Kanban board at [https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&amp;projectKey=SFDA&amp;selectedIssue=SFDA-129](https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&amp;projectKey=SFDA&amp;selectedIssue=SFDA-129) .
 
-# Sprint 1
+Your sprint backlog, including both the user stories and developer tasks, is represented in a kanban board (1 point). The URL of the kanban board is documented in your README (1 point). Course staff can view the kanban board (1 point).
 
-## Sprint Planning and Sprint Goal
-For our first Sprint we forecast being able to complete 75 Story Points.  
-Rational: While 75 points seems like a lot, we want to be sure to build a good foundation to build upon for the rest of the application. We are hopeful we will be able to complete everything especially considering Veterans Day is Wednesday and we may have a bit more time than normal.   
+##### Our Kanban Board can be found on our JIRA page @[https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&amp;projectKey=SFDA&amp;selectedIssue=SFDA-12](https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&amp;projectKey=SFDA&amp;selectedIssue=SFDA-12)
 
-## Working Application
-Our Product Increment is working software and can be found at: http://54.219.4.96:4200/
+You have a sprint burndown chart. On the x-axis, you display time markers in units of 1 day. On the y-axis, you display story points remaining to get done. There is a linear curve descending from left to right; the leftmost point of the curve is number of story points in your sprint at sprint day 1; the rightmost point is 0 story points remaining on the last day of the sprint. The burndown chart, or the URL of the burndown chart, is document in your README. Course staff can view the burndown chart. (1 point for each sentence you complete)
 
-## Burndown Chart
-The burndown chart is located in Jira [burndown chart](https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=SFDA&view=reporting&chart=burndownChart&sprint=1&estimate=issueCount_). 
+##### For our Sprint Burndown Chart we decided to use an excel spreadsheet. To do this, we adapted it from a template that we found a website called coria.com (Full URL: https://www.coria.com/insights/blog/project-management/how-to-create-a-burndown-chart-in-excel)
 
-We did update our Sprint Task Board and Burndown Chart. However, becasue we modified our Product Backlog, there was a delay and all of our updates are logged as being started on 11/15.  
+Daily Scrum: You have conducted multiple Daily Scrums. You document evidence of at least one daily scrum in your README your daily scrums, you discussed: what did you do in the last 24 hours that helped the Development Team meet the Sprint Goal? In your README, document which team members did which activities. (1 point for each team member&#39;s response, up to a maximum of 5 points)
 
-## Kanban Board
-The Kanban Board contains the tasks we planned to accomplish this sprint. [Kanban Board Sprint 1](https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=SFDA&selectedIssue=SFDA-21). 
- 
-## Mob Programming
-We accomplished much of the first task using Mob Programming. We were able to maximize our productivity by pooling our strengths. Photos of our Mob Programming Session are included in the folder Sprint 1 Pictures.
-![Mob Programming 1](images/Mob-Programming-1.png)<br/><br/><br/>
-![Mob Programming 2](images/Mob-Programming-2.png)<br/><br/><br/>
-![Mob Programming 3](images/Mob-Programming-3.png)<br/><br/><br/>
-![Mob Programming 4](images/Mob-Programming-4.png)<br/><br/><br/>
+In your daily scrums, you discussed: what will you do in the next 24 hours to help the Development Team meet the Sprint Goal? In your README, document which team members plan to do which activities. (1 point for each team member&#39;s response, up to a maximum of 5 points
 
-## Test First
-We built our Application Test First. This is evidenced by ten functional test cases that all pass. The tests can be found at https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/UsersApplicationTests.java.
-![Test Cases Report](images/test-cases-sprint1.png)
+In your daily scrums, you discussed: do you see any impediment that prevents you or the Development Team from meeting the Sprint Goal? What are the impediments? What is your impediment removal plan? (1 point for each question answered)
 
-## Sprint 1 Backlog
-The Development Team (alone) chose this Spring Backlog after we refined some the items during Product Backlog Refinment.    
+##### Notes from three daily scrums can be found at the bottom of the README. We discussed our impediments, what we did in the last 24 Hours and what we planned to do in the next 24 hours.
 
-Create Home Page: ESTIMATION 21. 
-Story: As an App User, I need to find the App through a search engine, and therefore need a home page to land on. 
-Acceptance Criteria: App is hosted on a web server and is serving a static webpage with basic SEO. 
+Every day during the sprint, update your sprint task board and burndown chart. Provide evidence (URLs or images) in your README to show that you did this. (1 point for each time you updated your tracking indicators, up to a maximum of 2 points)
 
-Create QR Code : ESTIMATION 34. 
-Story: As a Family, I need to get QR Code online to be identified for Humanitarian Relief. 
-Acceptance Criteria: A page is created on the site that displays a unique QR Code every time is is loaded. A database is created to store each QR code and confirm unique ones are being generated. 
+##### When we met, we updated our task list and burndown chart. We have included four pictures: Before and After of our Kanban Board and Before and after of our Burndown Chart.
 
-Build Registration Page : ESTIMATION 34. 
-Story: As an app user, I need a page to register and login  
-Acceptance Criteria: A page must be created that allow the user to register. Upon registration a confirmation email is created.  
+Pair- or Mob-Programming: There is evidence that you paired or mobbed on your code. The evidence could be a photo or video of your team working together, or it could be some other kind of evidence. The evidence is included in your README. (1 point for each team member who participated, up to a maximum of 5 points)
 
-## Tasks
-PBI #1 Set up AWS Instance w/ security settings. 
-PBI #1 Register SSH Key with Juan's GitHub. 
-PBI #1 Confirm instance has Access and can pull from the repo. 
-PBI #1 Create a Spring Boot App with buil-in server. 
-PBI #1 Allow App to serve static files. 
-PBI #1 Build and run tests for confirm everything is working. 
-PBI #1 Delpoy app to server via gitHub. 
-PBI #1 Build HTML Page with Basic SEO. 
-  
-PBI #2 Create Database or file to store QR Code  
-PBI #2 Build HTML Page with Bootstrap    
-PBI #2 Page displays a QR Code using an API. 
-PBI #2 Build and run tests for confirm everything is working. 
-  
-PBI #3 Build HTML with Bootstrap and a form that receives information. 
-PBI #3 Allow Users to create an user entry in the database/file. 
-PBI #3 Build and run tests for confirm everything is working. 
-  
-  
- # Sprint Review
- After the Sprint was completed, we conducted the Sprint Review. We discussed what we accomplished, our strengths, weaknesses, and what we want to acheive moving forward (notes are below).
- 
- During our Sprint Review, Juan's friend Johana Salgado, (picture below) who is representing a donor, attended our session. She liked the work we had done during the sprint and commented on the layout and design of the home page. 
- 
-What did we accomplish? We completed the homepage and set the groundwork for the future product backlog items. We have the infrastructure in place and will be able to effectivly move forward.  
+##### We completed our first task together during a mob programming session. For evidence, we have included pictures of our zoom session.
 
-Strengths: We all have technical skills required for the Sprint. Our knowledge and experience complement eachother. We are all commited to the project and made the time to do the work.
+Test-Driven Development: There is evidence that you are building your product test-first. There are at least 20 micro-scale unit tests in your test suite, and they all pass. (1 point for each \*new\* unit test that you created in this sprint, up to a maximum of 10 points)
 
-Room For Improvment: Deeper knowledge of the technology. We could improve our communications. Better implementation of JIRA. Improve our knowledge of Agile. 
- 
-Goals Moving Forward: Have every team member engage with JIRA. We will send a Google Invite for every future meeting. We will use one zoom room instead of a new one every time. We will complete all of the items on our Sprint Backlog. We will continue to research the technologies.
+##### Our application contains over 20 tests. The last sprint we lost points because the tests were written after the code and did not cover all of the functionality. This Sprint, we did things differently by writing our tests before coding and creating micro tests to explore individual functionalities like form validation. Our tests are in three separate files and can be found at:
 
-Product Backlog Refinement: During our Sprint Reveiw, we received positive feedback from our stakeholder. She indicated that the design and layout was clear and understandable. As a result, we refined our product backlog by indicating, in the acceptance criteria of each new page, that it was neccessary to follow the Home Page's existing layout. 
+##### [https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/UsersApplicationTests.java](https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/UsersApplicationTests.java)
 
-![Mob Programming 4](images/Stakeholder-meet-1.png)<br/>
-![Mob Programming 4](images/Stakeholder-meet-2.png)<br/>
+##### [https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/SFDAUserValidatorTest.java](https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/SFDAUserValidatorTest.java)
 
-# Daily Scrums
+##### [https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/util/QRCodeGeneratorTest.java](https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/util/QRCodeGeneratorTest.java)
 
-## 11/11 Daily Scrum. 
-At 6pm our Development had the Daily Scrum. 
+Sprint Review: Your team conducts a Sprint Review.
 
-### Past 24 Hours. 
-In the past 24 Hours we all spent time researching different web development approaches that we may want to use:    
+##### Our Sprint Review was conducted at the end of our Sprint on NOV 30. We all felt positive about the changes we implemented and felt that we were able to increase our productivity.
 
-Alex G - had built a Vue app. 
-Manav had found a Template that uses Spring with Vue. 
-Juan - Created an Angular Project and explored how Spring Works. 
-Anup - Started to work with Spring Board and React JS  
+Your product increment is working software. The working software is running on a publicly accessible system (this could be a web server, a mobile app store, or something else.) Your README includes evidence that your product increment is working software. Your README includes the URL of the working software, an invitation to test the mobile app, etc. (1 point for each sentence in this rubric element)
 
-### Impediments
-Impediment: We have not all agreed on a technology to use. 
-Solution: We will continue to discuss and will build as necessary. We will also see what technology works best as we go.  
+##### Our Product increment is working software. Evidence for this can be seen by accessing the application&#39;s URL at : [http://54.219.4.96:8080](http://54.219.4.96:8080/)
 
-Impediment: Our Product Backlog Items need to be redone. 
-Solution: We will refine our product Backlog before the end of the meeting today.  
+At least one stakeholder attends your sprint review, and you provide evidence that your stakeholder was there. You revise your product backlog based on the feedback you receive. (1 point for each sentence in this rubric item)
 
-Impediment: We do not have an updated burndown chart. 
-Solution: Prashant will add the new product backlog items to the chart once we complete the Product Backlog Revision. 
+##### During our Sprint Review, a stakeholder,Maybel Salgado, attended. She represents the families in need. She is a graphic designer and commented on the look and feel of the site. She gave all positive feedback so we will continue with our current graphic layout plan moving forward. We did not need to revise our Product Backlog, but will keep her feedback in mind if we need to create any future products backlog items. Pictures are below.
 
-### Next 24 Hours. 
-Mob Programming Session to deploy trivial app on Development Environment. 
-Continue building test cases. 
-Continue researching front-end options (Vue, React, Angular). 
+Continuous Integration: You have a Continuous Integration system running. You only work on the main/trunk/master together—there are no long-lived code branches. The CI system automatically builds your code every time you push to main/trunk/master. The CI system automatically executes all your tests every time it builds the code. You have provided evidence that your CI system exists and behaves properly. (1 point for each sentence in this rubric element
+
+##### We built our CI Pipeline with Jenkins. It is running on a Docker container on our server. It automatically builds every time we push our code to the repo. After building, it automatically executes our tests.
+
+##### To automatically build and test our code, our GitHub server uses a webhook to push events to our Jenkins instance. If an event is sent, it runs the Jenkinsfile in the server. Our Jenkins file can be found at [https://github.com/jcvalladares/xtreamteam/blob/main/Jenkinsfile](https://github.com/jcvalladares/xtreamteam/blob/main/Jenkinsfile) and runs the tests with the following command:
+
+##### sh "${env.M2\_HOME}/bin/mvn -f ${env.WORKSPACE}/sfda/pom.xml clean install&quot;"
+
+##### Evidence for our working pipeline can also be found on our Jenkins Instance (credentials below)
+
+##### URL: [http://54.219.4.96:8081/](http://54.219.4.96:8081/)
+
+##### Login: with team3
+
+##### Password: Xtreme123!
+
+##### Also, latest pipeline's console output demonstrates that the pipeline builds the application and runs the tests. This can be found at the link below (test confirmation is toward the bottom of the output).
+
+##### [http://54.219.4.96:8081/job/sfp-build-pipeline/14/console](http://54.219.4.96:8081/job/sfp-build-pipeline/14/console)
+
+Continuous Delivery: You have a Continuous Delivery system running. When the build is &quot;green&quot;, the CD system deploys your software to a production environment (&quot;Production&quot;); when the build is &quot;red&quot;, the CD system doesn&#39;t alter Production. The CD system executes additional tests of your software in Production to ensure Production is up and running successfully after deployment. You have provided evidence that your CD system exists and behaves properly
+
+##### Our CD Pipeline also executes in Jenkins. Our pipeline contains a parameter that allows the user to determine if it wants to deploy the application to production. If the box is selected, the &#39;Deploy&#39; section of the Jenkins script is run and the application is &quot;deployed to production&quot;. In addition, we add an additional environment test (via a curl command) to confirm everything was deployed properly.
+
+##### Our pipeline can be found on the Jenkins Instance:
+
+##### URL: [http://54.219.4.96:8081/](http://54.219.4.96:8081/)
+
+##### Login: with team3
+
+##### Password: Xtreme123!
+
+##### Our production environment is not yet online, so imitate a production deployment we are re-running the .jar file.
+
+##### Additionally, we have the CD pipeline fully functioning locally. More details can be found at:
+
+Sprint Retrospective: Your team conducts a Sprint Retrospective. All team members participate in the sprint retrospective. As a team, you identify at least one helpful change to improve your effectiveness together. You make a concrete plan for making that change during the next sprint. (Provide evidence. 1 point for each sentence in this rubric element.)
+
+##### At the end of our sprint, on NOV 29th, we conducted our Sprint Retrospective. All team members were present.
+
+##### ISSUE: We did a great job of updating our tasks, but could have done better.
+
+##### SOLUTION: Instead of waiting until the group meets to update tasks, we will update the tasks as soon as we complete them, and then will review with the group afterwards.
+
+##### ISSUE: We felt that our diverse CI/CD knowledge prevented us from coordinating and being as effective as possible.
+
+##### SOLUTION: Moving forward, the developers without Jenkins experience will spend some time researching.
+
+##### ISSUE: We felt our version control knowledge differed enough to prevent us from being as effective as possible.
+
+##### SOLUTION; Moving forward, the developers without version control experience will spend time researching it.
 
 
+## DAILY_SCRUM 1 11.21
 
-## 11/15 Daily Scrum
-At 4pm our Development had the Daily Scrum.
+Impediments
 
-### Past 24 Hours
-Alex G - Researched QR api information. 
-Anup - Created Test Cases for the PBI's
-Manav - Worked on QR Code Generation and server deployment
-Prashant - Updated the Sprint Backlog on Jira
-Juan - Completed the HTML for the Home Page Login and Signup
+WEB SERVER ISSUE: One impediment is that our web server has a bug that is causing it to shut down.
 
-### Impediments
+Impediment Removal Plan: We have identified our Angular Server as the cause of the issue. To remove the impediment, we will change our server configuration to serve a static webpage.
 
-We did not forsee any impediments moving forward
+WEB SERVER ISSUE: Another impediment we identified was that our skill sets do not overlap.
 
-### Next 24 Hours
-As a team, we are planning to Mob Program and also prepare for the Sprint Retrospective.
+IMPEDIMENT REMOVAL PLAN: To remove this impediment, we have identified technologies that we are all familiar with. We plan to use these.
 
+Past 24 Hours
 
+Alex G: Sprint Planning and Product Backlog Refinement. Considered how we could improve the next sprint
 
+Prashant: Sprint Planning Session and Product Backlog Refinement. Considered TDD Approaches.
+
+Juan: Sprint Planning Session and Product Backlog Refinement. Researched Spring/Boot on Pluralsight
+
+Anup: Spring Planning Session and Product Backlog Refinement. Considered TDD Approaches.
+
+Manav: Sprint Planning Session and Product Backlog Refinement. Considered Web Server Approaches.
+
+Next 24 Hours:
+
+Alex: Re Write README to line up with Rubric. Mob Programming to fix impediment.
+
+Prashant: Create CI/CD Pipeline. Mob Programming to fix impediment.
+
+Juan: Create Log In Page. Mob Programming to fix impediment.
+
+Anup: Work on Web App. Improve TDD approach. Mob Programming to fix impediment.
+
+Manav: Deploy CI/CD Pipeline on Server. Mob Programming to fix impediment.
+
+## DAILY\_SCRUM 2 11.21
+
+**Past 24 Hours**
+
+Alex: Rewrote README to line up with Rubric
+
+Prashant: Worked with Manav to create Continuous Integration Pipeline.
+
+Juan: Wrote the Home Page, Login Page and Signup Page in Angular. Set up the service for the API call.
+
+Anup: built back end of spring application using a test first approach. Completed 7 test. Implemented Google QR Code Generator.
+
+Manav: Worked with Prashant to build Continuous Integration Pipeline and worked toward CD. Docker containers.
+
+**Impediments**
+
+Bugs - There are some bugs in the CD Pipeline.
+
+Impediment solution plan: Manav and Prashant will continue to troubleshoot and fix bugs.
+
+Front-End/Back-End Integration – there is still some work to be done
+
+Impediment solution plan: Juan and Anup will work together to integrate.
+
+Next 24 Hours:
+
+Alex: Will continue working on the README. Will create hard copy of Burndown Chart.
+
+Manav – Fix Bugs in the CI/CD Pipeline
+
+Prashant – Fix Bugs in the CI/CD Pipeline
+
+Juan – Integrate Frontend with backend.
+
+Anup – Integrate Backend with Frontend.
 
