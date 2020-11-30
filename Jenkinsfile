@@ -21,7 +21,7 @@ pipeline {
         stage('Code Building and Unit Test suite') {
             steps {
                 script {    
-                        sh "${env.M2_HOME}/bin/mvn -f ${env.WORKSPACE}/sfda/pom.xml clean install test surefire-report:report"
+                        sh "${env.M2_HOME}/bin/mvn -f ${env.WORKSPACE}/sfda/pom.xml clean site"
                 }
 
             }
