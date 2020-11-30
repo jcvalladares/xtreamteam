@@ -5,6 +5,7 @@ import java.sql.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 
 import lombok.Data;
@@ -51,4 +52,7 @@ public class Users {
     
     @Column
     private Date birthDate;
+    
+    @Transient
+    private String token;
 }

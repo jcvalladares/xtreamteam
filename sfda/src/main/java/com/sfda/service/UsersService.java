@@ -33,7 +33,7 @@ public class UsersService {
 		}
 		return null;
 	}
-	public Users findUser(String email ) {
+	public Users findUser(String email) {
 		Optional<Users> loggedinUsers = Optional.ofNullable(usersLoginRepository.findByEmail(email));
 		return loggedinUsers.get();
 	}

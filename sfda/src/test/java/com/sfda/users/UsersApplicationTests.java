@@ -99,16 +99,15 @@ class UsersApplicationTests {
 	@Test
 	public void testSuccessfulUserLoginScenario() {
 		Users user = new Users();
-		user.setFirstName("TestSecond3");
-		user.setLastName("TestLast24");
-		user.setEmail("test332@test.com");
-		Users response = loginController.loginUser("abc@xyz.com", "abcd");
+		user.setEmail("test@test.com");
+		user.setPassword("test");
+		Users response = loginController.loginUser(user.getEmail(), user.getPassword());
 		assertTrue(response != null);
 	}
 	
 	@Test
 	public void testUnSuccessfulUserLoginScenario() {
-		Users response = loginController.loginUser(null, "abcd");
+		Users response = loginController.loginUser("test@test.com", "test");
 		assertTrue(response != null);
 	}
 	
