@@ -7,12 +7,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.imageio.ImageIO;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.WriterException;
@@ -25,8 +31,6 @@ import com.sfda.util.QRCodeGenerator;
 import com.sfda.util.UserDetailsValidator;
 
 import lombok.extern.slf4j.Slf4j;
-
-import javax.imageio.ImageIO;
 
 @Slf4j
 @RestController
@@ -47,10 +51,10 @@ public class UsersController {
 	public ResponseEntity<?> saveUser(@RequestBody Users user) {
 		log.info("UsersController:  list users");
 		Users resource = null;
-		//if(UserDetailsValidator.isValidEmail(user.getEmail()) && UserDetailsValidator.isValidPhone(user.getPhone())) {
+		if(UserDetailsValidator.isValidEmail(user.getEmail()) && UserDetailsValidator.isValidPhone(user.getPhone())) {
 			user.setPhone(user.getPhone().replaceAll("[-, ]", ""));
 			resource = usersService.saveUser(user);
-		//}
+		}
 		return ResponseEntity.ok(resource);
 	}
 	
@@ -58,10 +62,10 @@ public class UsersController {
 	public ResponseEntity<?> createQRCode(@RequestBody Users user) {
 		log.info("UsersController#createQRCode");
 		try {
-		Map<EncodeHintType, ErrorCorrectionLevel> hintMap = new HashMap<EncodeHintType, ErrorCorrectionLevel>();
-		hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
-		BitMatrix matrix = QRCodeGenerator.createQRCode(user.getEmail(), "UTF-8", hintMap, 250, 250);
-		return ResponseEntity.ok(matrix);
+			Map<EncodeHintType, ErrorCorrectionLevel> hintMap = new HashMap<EncodeHintType, ErrorCorrectionLevel>();
+			hintMap.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.L);
+			BitMatrix matrix = QRCodeGenerator.createQRCode(user.getEmail(), "UTF-8", hintMap, 250, 250);
+			return ResponseEntity.ok(matrix);
 		} catch (WriterException | IOException e) {
 			e.printStackTrace();
 		}
