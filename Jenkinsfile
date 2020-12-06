@@ -51,11 +51,6 @@ node {
 		    }
 		    sh "docker run --name sfdadocker -d -p 8080:8080 sfdadocker:${env.BUILD_NUMBER}"
 	    }
-	    stage("Staging Deployment Check") {
-		    def ret_code = sh(script: "curl --fail -s -o /dev/null -w '%{http_code}' http://foodtrust.me:80/", returnStdout: true).trim()
-				echo ret_code
-		    echo "Post Deployment Check Completed"
-	    }
 			stage('Production Deployment') {
 				// deploy docker image to nexus
 				def flag = 0
@@ -73,5 +68,15 @@ node {
 					echo "Production Deployment Skipped"
 				}
 				}
+			stage("Production Deployment Check") {
+			    def ret_code = sh(script: "curl --fail -s -o /dev/null -w '%{http_code}' http://foodtrust.me:80/", returnStdout: true).trim()
+					if (ret_code == "200") {
+						echo "Deployment OK"
+					}
+					else {
+						echo "Deployment NOT OK"
+					}
+			    echo "Post Deployment Check Completed"
+		    }
 
 }
