@@ -52,7 +52,7 @@ node {
 		    sh "docker run --name sfdadocker -d -p 8080:8080 sfdadocker:${env.BUILD_NUMBER}"
 	    }
 	    stage("Staging Deployment Check") {
-		    def ret_code = sh(script: "curl --fail -s -o /dev/null -w '%{http_code}' http://foodtrust.me:8080/", returnStdout: true).trim()
+		    def ret_code = sh(script: "curl --fail -s -o /dev/null -w '%{http_code}' http://foodtrust.me:80/", returnStdout: true).trim()
 				echo ret_code
 		    echo "Post Deployment Check Completed"
 	    }
