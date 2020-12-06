@@ -57,7 +57,7 @@ node {
 	    }
 			stage('Production Deployment') {
 				// deploy docker image to nexus
-				def flag = 0
+				def flag = 1
 				if (flag == 1) {
 					echo "Docker Image Tag Name: ${dockerImageTag}"
 					try {
@@ -66,7 +66,7 @@ node {
 					} catch (Exception e) {
 						echo 'Exception occurred: ' + e.toString()
 					}
-					sh "docker run --name sfdadockerpro -d -p 80:80 sfdadocker:${env.BUILD_NUMBER}"
+					sh "docker run --name sfdadockerpro -d -p 80:8080 sfdadocker:${env.BUILD_NUMBER}"
 				}
 				else {
 					echo "Production Deployment Skipped"
