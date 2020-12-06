@@ -57,7 +57,7 @@ node {
 	    }
 			stage('Production Deployment') {
 				// deploy docker image to nexus
-				def flag = 1
+				def flag = 0
 				if (flag == 1) {
 					echo "Docker Image Tag Name: ${dockerImageTag}"
 					try {
