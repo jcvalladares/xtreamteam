@@ -11,7 +11,7 @@ node {
 
 	    def dockerImageTag = "sfdadocker${env.BUILD_NUMBER}"
 
-	    stage('SFDA Workflow Engine Code Checkout') { 
+	    stage('SFDA Workflow Engine Code Checkout') {
 		    // for display purposes
 		    echo "Cleaning the Workspace"
 		    cleanWs()
@@ -31,7 +31,7 @@ node {
 		    // build docker image from jar
 		    dockerImage = docker.build("sfdadocker:${env.BUILD_NUMBER}")
 	    }
-	
+
 	    stage('Sanity Check') {
 		    // flag to toggle whether to automatically build
 		    def flag = 0
@@ -40,7 +40,7 @@ node {
 		    }
 	    }
 
-	    stage('Deploy Docker Image') {
+	    stage('Staging Deployment') {
 		    // deploy docker image to nexus
 		    echo "Docker Image Tag Name: ${dockerImageTag}"
 		    try {
@@ -51,8 +51,26 @@ node {
 		    }
 		    sh "docker run --name sfdadocker -d -p 8080:8080 sfdadocker:${env.BUILD_NUMBER}"
 	    }
-	    stage("Post Deployment Check") {
+	    stage("Staging Deployment Check") {
 		    //def ret_code = sh(script: "curl --fail -s -o /dev/null -w '%{http_code}' http://localhost:8080/", returnStdout: true).trim()
 		    echo "Post Deployment Check Completed"
 	    }
+			stage('Production Deployment') {
+				// deploy docker image to nexus
+				def flag = 1
+				if (flag == 1) {
+					echo "Docker Image Tag Name: ${dockerImageTag}"
+					try {
+						sh "docker stop sfdadockerpro"
+						sh "docker rm sfdadockerpro"
+					} catch (Exception e) {
+						echo 'Exception occurred: ' + e.toString()
+					}
+					sh "docker run --name sfdadocker -d -p 80:80 sfdadockerpro:${env.BUILD_NUMBER}"
+				}
+				else {
+					echo "Production Deployment Skipped"
+				}
+				}
+
 }
