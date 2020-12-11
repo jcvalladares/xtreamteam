@@ -60,7 +60,30 @@ public class UserDetailsValidator {
 		return true;
 	}
 	
+	public static boolean validateRequiredFieldsAreNotEmpty(Users users) {
+		return true;
+	}
+	
+	public static boolean validateMiddleName(Users users) {
+		return true;
+	}
+	
+	public static boolean validateUserType(Users users) {
+		return true;
+	}
+	
+	public static Users validateAndUpdateAge(Users users) {
+		if(validateBirthDate(users)) {
+			return null;
+		}
+		return null;
+	}
+	
 	public static boolean validUserType(Users users) {
 		return true;
+	}
+	
+	public static String generateToken(Users users) {
+		return "";
 	}
 }

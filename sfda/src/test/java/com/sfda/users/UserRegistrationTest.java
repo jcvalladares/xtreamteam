@@ -2,7 +2,14 @@ package com.sfda.users;
 
 import static org.junit.Assert.assertTrue;
 
+import java.sql.Date;
+import java.util.Calendar;
+
+import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
+
+import com.sfda.entity.Users;
+import com.sfda.util.UserDetailsValidator;
 
 public class UserRegistrationTest {
 	
@@ -13,51 +20,117 @@ public class UserRegistrationTest {
 	
 	@Test
 	public void testValidPassword() {
-		assertTrue(true);
+		Users donor = new Users();
+		donor.setFirstName("FN_Test1");
+		donor.setLastName("LN_Test1");
+		donor.setIsValidated("Y");
+		donor.setType("DONOR");
+		donor.setPassword("t3stPassw0rd@1");
+		assertTrue(UserDetailsValidator.validatePassword(donor));
 	}
 	
 	@Test
 	public void testValidFirstNameLastName() {
-		assertTrue(true);
+		Users donor = new Users();
+		donor.setFirstName("FN_Test1");
+		donor.setLastName("LN_Test1");
+		donor.setIsValidated("Y");
+		donor.setType("DONOR");
+		donor.setPassword("t3stPassw0rd@1");
+		assertTrue(UserDetailsValidator.validateFirstAndLastName(donor));
 	}
 	
 	@Test
 	public void testSqlInjections() {
-		assertTrue(true);
+		Users donor = new Users();
+		donor.setFirstName("FN_Test1");
+		donor.setLastName("LN_Test1");
+		donor.setIsValidated("Y");
+		donor.setType("DONOR");
+		donor.setPassword("t3stPassw0rd@1");
+		assertTrue(UserDetailsValidator.checkSqlInjections(donor));
 	}
 	
 	@Test
 	public void testValidBirthDate() {
-		assertTrue(true);
+		Users donor = new Users();
+		donor.setFirstName("FN_Test1");
+		donor.setLastName("LN_Test1");
+		donor.setIsValidated("Y");
+		donor.setType("DONOR");
+		donor.setPassword("t3stPassw0rd@1");
+		assertTrue(UserDetailsValidator.validateBirthDate(donor));
 	}
 	
 	@Test
-	public void testMiddleNameIsEmptyOrValid() {
-		assertTrue(true);
+	public void testValidMiddleName() {
+		Users donor = new Users();
+		donor.setFirstName("FN_Test1");
+		donor.setMiddleName("MN_Test1");
+		donor.setLastName("LN_Test1");
+		donor.setIsValidated("Y");
+		donor.setType("DONOR");
+		donor.setPassword("t3stPassw0rd@1");
+		assertTrue(UserDetailsValidator.validateMiddleName(donor));
 	}
 	
 	@Test
 	public void testValidUserTypeISelected() {
-		assertTrue(true);
+		Users donor = new Users();
+		donor.setFirstName("FN_Test1");
+		donor.setLastName("LN_Test1");
+		donor.setIsValidated("Y");
+		donor.setType("DONOR");
+		donor.setPassword("t3stPassw0rd@1");
+		assertTrue(UserDetailsValidator.validUserType(donor));
 	}
 
 	@Test
 	public void testValidAgeCalculation() {
-		assertTrue(true);
+		Users donor = new Users();
+		donor.setFirstName("FN_Test1");
+		donor.setLastName("LN_Test1");
+		donor.setIsValidated("Y");
+		donor.setType("DONOR");
+		donor.setPassword("t3stPassw0rd@1");
+		Calendar c = Calendar.getInstance();
+		c.setTime(new java.util.Date());
+		c.add(Calendar.YEAR, -20);
+		donor.setBirthDate(new Date(c.getTime().getTime()));
+		assertTrue(UserDetailsValidator.validateAndUpdateAge(donor).getAge() == 20);
 	}
 	
 	@Test
 	public void testIfAllRequiredFieldsAreNotEmpty() {
-		assertTrue(true);
+		Users donor = new Users();
+		donor.setFirstName("FN_Test1");
+		donor.setLastName("LN_Test1");
+		donor.setIsValidated("Y");
+		donor.setType("DONOR");
+		donor.setPassword("t3stPassw0rd@1");
+		assertTrue(UserDetailsValidator.validateRequiredFieldsAreNotEmpty(donor));
 	}
 	
 	@Test
 	public void testCheckIfUserIs18YearsOld() {
-		assertTrue(true);
+		Users donor = new Users();
+		donor.setFirstName("FN_Test1");
+		donor.setLastName("LN_Test1");
+		donor.setIsValidated("Y");
+		donor.setType("DONOR");
+		donor.setPassword("t3stPassw0rd@1");
+		Calendar c = Calendar.getInstance();
+		c.setTime(new java.util.Date());
+		c.add(Calendar.YEAR, -40);
+		donor.setBirthDate(new Date(c.getTime().getTime()));
+		assertTrue(UserDetailsValidator.validateAndUpdateAge(donor).getAge() > 18);
 	}
 	
 	@Test
 	public void testTokenIsGenerated() {
-		assertTrue(true);
+		Users user = new Users();
+		user.setFirstName("FN_Test1");
+		user.setPassword("abc123");
+		assertTrue(StringUtils.isNotEmpty(UserDetailsValidator.generateToken(user)));
 	}
 }
