@@ -55,4 +55,7 @@ public class Users {
     
     @Transient
     private String token;
+    
+    @Transient
+    private int age;
 }

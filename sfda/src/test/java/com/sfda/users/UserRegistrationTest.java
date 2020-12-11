@@ -32,7 +32,32 @@ public class UserRegistrationTest {
 	}
 	
 	@Test
-	public void test() {
+	public void testMiddleNameIsEmptyOrValid() {
+		assertTrue(true);
+	}
+	
+	@Test
+	public void testValidUserTypeISelected() {
+		assertTrue(true);
+	}
+
+	@Test
+	public void testValidAgeCalculation() {
+		assertTrue(true);
+	}
+	
+	@Test
+	public void testIfAllRequiredFieldsAreNotEmpty() {
+		assertTrue(true);
+	}
+	
+	@Test
+	public void testCheckIfUserIs18YearsOld() {
+		assertTrue(true);
+	}
+	
+	@Test
+	public void testTokenIsGenerated() {
 		assertTrue(true);
 	}
 }

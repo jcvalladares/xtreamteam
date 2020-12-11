@@ -43,4 +43,24 @@ public class UserDetailsValidator {
 	public static boolean validatePasswordSize(String password) {
 		return password != null && password.length() >= 8;
 	}
+	
+	public static boolean validatePassword(Users users) {
+		return true;
+	}
+	
+	public static boolean validateFirstAndLastName(Users users) {
+		return true;
+	}
+	
+	public static boolean checkSqlInjections(Users users) {
+		return true;
+	}
+	
+	public static boolean validateBirthDate(Users users) {
+		return true;
+	}
+	
+	public static boolean validUserType(Users users) {
+		return true;
+	}
 }

@@ -103,6 +103,18 @@
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
 		</dependency>
+		<dependency>
+		    <groupId>org.spockframework</groupId>
+		    <artifactId>spock-core</artifactId>
+		    <version>1.0-groovy-2.4</version>
+		    <scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.codehaus.groovy</groupId>
+		    <artifactId>groovy-all</artifactId>
+		    <version>2.4.7</version>
+		    <scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -135,7 +147,20 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 			</plugin>
+			<plugin>
+		        <groupId>org.codehaus.gmavenplus</groupId>
+		        <artifactId>gmavenplus-plugin</artifactId>
+		     </plugin>
 		</plugins>
+		<pluginManagement>
+	      <plugins>
+	        <plugin>
+	          <groupId>org.codehaus.gmavenplus</groupId>
+	          <artifactId>gmavenplus-plugin</artifactId>
+	          <version>1.11.1</version>
+	        </plugin>
+	      </plugins>
+    	</pluginManagement>
 	</build>
 	<!-- `mvn clean test site` to generate the junit html report -->
 	<reporting>
