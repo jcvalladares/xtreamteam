@@ -43,8 +43,8 @@ public class UserRegistrationTest {
 	@Test
 	public void testSqlInjections() {
 		Users donor = new Users();
-		donor.setFirstName("FN_Test1");
-		donor.setLastName("LN_Test1");
+		donor.setFirstName("Select * from users;");
+		donor.setLastName("Update");
 		donor.setIsValidated("Y");
 		donor.setType("DONOR");
 		donor.setPassword("t3stPassw0rd@1");
@@ -58,6 +58,7 @@ public class UserRegistrationTest {
 		donor.setLastName("LN_Test1");
 		donor.setIsValidated("Y");
 		donor.setType("DONOR");
+		donor.setBirthDate(new Date(2000, 10, 10));
 		donor.setPassword("t3stPassw0rd@1");
 		assertTrue(UserDetailsValidator.validateBirthDate(donor));
 	}
@@ -82,7 +83,7 @@ public class UserRegistrationTest {
 		donor.setIsValidated("Y");
 		donor.setType("DONOR");
 		donor.setPassword("t3stPassw0rd@1");
-		assertTrue(UserDetailsValidator.validUserType(donor));
+		assertTrue(UserDetailsValidator.validateUserType(donor));
 	}
 
 	@Test
@@ -108,6 +109,12 @@ public class UserRegistrationTest {
 		donor.setIsValidated("Y");
 		donor.setType("DONOR");
 		donor.setPassword("t3stPassw0rd@1");
+		donor.setEmail("dd@dd.com");
+		donor.setPhone("1234567890");
+		Calendar c = Calendar.getInstance();
+		c.setTime(new java.util.Date());
+		c.add(Calendar.YEAR, -20);
+		donor.setBirthDate(new Date(c.getTime().getTime()));
 		assertTrue(UserDetailsValidator.validateRequiredFieldsAreNotEmpty(donor));
 	}
 	
@@ -131,6 +138,6 @@ public class UserRegistrationTest {
 		Users user = new Users();
 		user.setFirstName("FN_Test1");
 		user.setPassword("abc123");
-		assertTrue(StringUtils.isNotEmpty(UserDetailsValidator.generateToken(user)));
+		assertTrue(StringUtils.isNotEmpty(UserDetailsValidator.generateToken(user).getToken()));
 	}
 }
