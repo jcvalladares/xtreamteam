@@ -44,10 +44,13 @@ public class UserRegistrationTest {
 	public void testSqlInjections() {
 		Users donor = new Users();
 		donor.setFirstName("Select * from users;");
+		donor.setMiddleName("mm");
 		donor.setLastName("Update");
 		donor.setIsValidated("Y");
 		donor.setType("DONOR");
 		donor.setPassword("t3stPassw0rd@1");
+		donor.setEmail("ss@ss.com");
+		donor.setPhone("1234567890");
 		assertTrue(UserDetailsValidator.checkSqlInjections(donor));
 	}
 	

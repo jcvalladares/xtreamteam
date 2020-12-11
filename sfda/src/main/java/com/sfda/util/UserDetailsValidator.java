@@ -73,11 +73,11 @@ public class UserDetailsValidator {
 	public static boolean checkSqlInjections(Users users) {
 		List<String> sqls = Arrays.asList("select", "update", "execute", "delete");
 
-		return users.getFirstName() != null && users.getLastName() != null && users.getMiddleName() != null
-				&& users.getEmail() != null && users.getPhone() != null
+		return users.getFirstName() != null && users.getLastName() != null && users.getEmail() != null
+				&& users.getPhone() != null
 				&& (sqls.contains(users.getFirstName().toLowerCase())
-						|| sqls.contains(users.getFirstName().toLowerCase())
-						|| sqls.contains(users.getMiddleName().toLowerCase())
+						|| sqls.contains(users.getLastName().toLowerCase())
+						|| (users.getMiddleName() != null && sqls.contains(users.getMiddleName().toLowerCase()))
 						|| sqls.contains(users.getEmail().toLowerCase())
 						|| sqls.contains(users.getPhone().toLowerCase()));
 	}
@@ -104,11 +104,10 @@ public class UserDetailsValidator {
 
 	public static Users validateAndUpdateAge(Users users) {
 		if (validateBirthDate(users)) {
-			LocalDate dt = LocalDate.of(users.getBirthDate().getYear(), users.getBirthDate().getMonth(),
-					users.getBirthDate().getDay());
 			LocalDate now = LocalDate.now();
-			Period p = Period.between(dt, now);
+			Period p = Period.between(users.getBirthDate().toLocalDate(), now);
 			users.setAge(p.getYears());
+			return users;
 		}
 		return null;
 	}
