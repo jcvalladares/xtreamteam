@@ -13,10 +13,10 @@ import com.sfda.repository.UsersRepository;
 @Component
 public class UsersService {
 
-	private UsersRepository usersRepository;
+	private final UsersRepository usersRepository;
 
-	private UsersLoginRepository usersLoginRepository;
-
+	private final UsersLoginRepository usersLoginRepository;
+	
 	public UsersService(UsersRepository usersRepository, UsersLoginRepository usersLoginRepository) {
 		this.usersRepository = usersRepository;
 		this.usersLoginRepository = usersLoginRepository;

@@ -9,7 +9,6 @@ import java.util.Map;
 
 import javax.imageio.ImageIO;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,8 +36,11 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping("/api/")
 public class UsersController {
 
-	@Autowired
-	UsersService usersService;
+	private final UsersService usersService;
+	
+	public UsersController(UsersService usersService){
+		this.usersService = usersService;
+	}
 
 	@GetMapping(path = UserLinks.LIST_USERS)
 	public ResponseEntity<?> listUsers() {
