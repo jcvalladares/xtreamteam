@@ -24,7 +24,7 @@
 
 #### RUBRIC: Your rationale for your forecast is documented in your README
 
-###### In Sprint 1, we estimated 75 but were unable to get close to our goal. In Sprint 2, we estimated 50 and that was closer to our actual velocity. For Sprint 3, we will estimate that we will have the approximately the same amount of time as sprint 2, and so are forecasting 50 story points. 
+###### In Sprint 1, we estimated 75 but were unable to get close to our goal. In Sprint 2, we estimated 50 and that was closer to our actual velocity. For Sprint 3, we will have the approximately the same amount of time to work as sprint 2, and so are forecasting 50 story points. 
 
 
 #### RUBRIC: You pulled stories into your sprint backlog. You pulled stories from the top of your product backlog. The aggregate size of the stories does not exceed your forecast. Development Team members participated in this activity (and in your project README, you made a statement or provided evidence that only Development Team members participated in this activity). (1 point for each item)
@@ -79,16 +79,13 @@
 
 #### RUBRIC: Every day during the sprint, update your sprint task board and burndown chart. Provide evidence (URLs or images) in your README to show that you did this. (1 point for each time you updated your tracking indicators, up to a maximum of 2 points)
 
-#### When we met, we did our best to update our task list and burndown chart with any relevant items. We have included four pictures: Before and After of our Kanban Board and Before and after of our Burndown Chart.
+###### When we met, we did our best to update our task list and burndown chart with any relevant items. We have included four pictures: Before and After of our Kanban Board and Before and after of our Burndown Chart.
 
-![Task 1 Before](images/SPRINT3_TASK1.png)
-![Task 1 After](images/SPRINT3_TASK2.png)
+![Task 1 Before](images/SPRINT3_T1.png)
+![Task 1 After](images/SPRINT3_T2.png)
 
-![Task 2 Before](images/SPRINT3_TASK3.png)
-![Task 2 After](images/SPRINT3_TASK4.png)
-
-![Task 3 Before](images/SPRINT3_TASK5.png)
-![Task 3 After](images/SPRINT3_TASK6.png)
+![Task 2 Before](images/SPRINT3_TASK5.png)
+![Task 2 After](images/SPRINT3_TASK6.png)
 
 ![Burndown Chart Before](images/SPRINT3_BURNDOWN_CHART_BEFORE.png)
 ![Burndown Chart After](images/SPRINT3_BURNDOWN_CHART_AFTER.png)
