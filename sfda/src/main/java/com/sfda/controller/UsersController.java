@@ -64,6 +64,7 @@ public class UsersController {
 		long id = users.size();
 		user.setId(id++);
 		resource = usersService.saveUser(user);
+		resource = UserDetailsValidator.generateToken(resource);
 		return ResponseEntity.ok(resource);
 	}
 	
