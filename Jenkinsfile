@@ -54,7 +54,7 @@ node {
 			stage('Production Deployment') {
 				// deploy docker image to nexus
 				def flag = 0
-				if (flag == 1) {
+				if (flag == 0) {
 					echo "Docker Image Tag Name: ${dockerImageTag}"
 					try {
 						sh "docker stop sfdadockerpro"
