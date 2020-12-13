@@ -42,7 +42,7 @@ public class UserDetailsValidator {
 		if (phone == null) {
 			return false;
 		}
-		Pattern pattern = Pattern.compile("^(\\d{3}[- .]?){2}\\d{4}$");
+		Pattern pattern = Pattern.compile("^(\\+\\d{1,2}\\s)?\\(?\\d{3}\\)?[\\s.-]\\d{3}[\\s.-]\\d{4}$");
 		Matcher matcher = pattern.matcher(phone);
 		return matcher.matches();
 	}

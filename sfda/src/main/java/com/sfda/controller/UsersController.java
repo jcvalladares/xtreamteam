@@ -12,12 +12,7 @@ import javax.imageio.ImageIO;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.WriterException;
@@ -33,6 +28,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/api/")
 public class UsersController {
 
@@ -53,10 +49,21 @@ public class UsersController {
 	public ResponseEntity<?> saveUser(@RequestBody Users user) {
 		log.info("UsersController:  list users");
 		Users resource = null;
-		if(UserDetailsValidator.isValidEmail(user.getEmail()) && UserDetailsValidator.isValidPhone(user.getPhone())) {
-			user.setPhone(user.getPhone().replaceAll("[-, ]", ""));
-			resource = usersService.saveUser(user);
+		Users userAdded = usersService.findUser(user.getEmail());
+		if (userAdded != null)
+		{
+			return  new ResponseEntity<>("User has been registered previously.", HttpStatus.BAD_REQUEST);
 		}
+
+		if (!UserDetailsValidator.isValidEmail(user.getEmail()))
+			return  new ResponseEntity<>("Email format is incorrect", HttpStatus.BAD_REQUEST);
+		if( !UserDetailsValidator.isValidPhone(user.getPhone())) {
+			return  new ResponseEntity<>("Phone format is incorrect", HttpStatus.BAD_REQUEST);
+		}
+		List<Users> users = usersService.findAll();
+		long id = users.size();
+		user.setId(id++);
+		resource = usersService.saveUser(user);
 		return ResponseEntity.ok(resource);
 	}
 	

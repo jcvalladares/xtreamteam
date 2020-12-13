@@ -7,47 +7,69 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Family</h5>
+          <h5 class="modal-title" id="exampleModalLongTitle">Register</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          <p>If you are a family in need, we will provide with food and support during this period of pandenic.m</p>
-
+          <p>Enter the information below</p>
             <fieldset>
               <div class="form-group">
-                <input class="form-control" formControlName="firstName" placeholder="First Name" type="text">
+                <select class="custom-select" formControlName="type" >
+                  <option value="" selected disabled>Select Type</option>
+                  <option value="FAMILY">Family</option>
+                  <option value="NOG">Non-profit</option>
+                  <option value="DON">Donnor</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input class="form-control" formControlName="firstName" placeholder="First Name" required type="text">
+                <small  *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)"   class="form-text text-muted">First name is required.</small>
               </div>
               <div class="form-group">
                 <input class="form-control" formControlName="middleName" placeholder="Middle Name"  type="text">
               </div>
               <div class="form-group">
-                <input class="form-control" formControlName="lastName" placeholder="Last Name"  type="text">
+                <input class="form-control" formControlName="lastName" placeholder="Last Name" required type="text">
+                <small  *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)"   class="form-text text-muted">Last name is required.</small>
               </div>
               <div class="form-group">
-                <input class="form-control" formControlName="Id"  placeholder="ID"  type="text">
+                <input class="form-control" formControlName="phone"  placeholder="Phone" required type="phone">
+                <small  *ngIf="phone.invalid && (phone.dirty || phone.touched)"   class="form-text text-muted">Phone number is required.</small>
               </div>
               <div class="form-group">
-                <input class="form-control" formControlName="phone"  placeholder="Phone"  type="text">
+                <input class="form-control" formControlName="email"  placeholder="Email"  required type="email">
+                <small  *ngIf="email.invalid && (email.dirty || email.touched)"   class="form-text text-muted">Email format is not correct.</small>
               </div>
               <div class="form-group">
-                <input class="form-control" formControlName="email"  placeholder="Email"  type="text">
+                <input class="form-control" formControlName="password"  placeholder="Password" required type="password">
+                <small  *ngIf="password.invalid && (password.dirty || password.touched)"   class="form-text text-muted">Email format is not correct.</small>
               </div>
               <div class="form-group">
-                <input class="form-control" formControlName="password"  placeholder="Password"  type="password">
-              </div>
-              <div class="form-group">
-                <input class="form-control" formControlName="password2"  placeholder="Password Again"   type="password">
+                <input class="form-control" formControlName="password2"  placeholder="Password Again" required  type="password">
+                <small  *ngIf="password2.invalid && (password2.dirty || password2.touched)"   class="form-text text-muted">Password must match.</small>
               </div>
             </fieldset>
-
+            <div id='errorMessage' role="alert" aria-live="assertive" aria-atomic="true" class="toast" data-autohide="true"  >
+              <div class="toast-header">
+                <strong class="mr-auto">Bootstrap</strong>
+                <small>11 mins ago</small>
+                <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="toast-body">
+                {{errorMessage}}
+              </div>
+            </div>
         </div>
         <div class="modal-footer">
-          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="submit" [disabled]="!signUpForm.valid" class="btn btn-primary">Save</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
 </form>
+
