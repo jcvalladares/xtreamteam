@@ -70,7 +70,7 @@ node {
 				}
 			stage("Production Deployment Check") {
 			    def ret_code = sh(script: "curl --fail -s -o /dev/null -w '%{http_code}' http://foodtrust.me:80/", returnStdout: true).trim()
-					if (ret_code == "200") {
+					if (ret_code == "000") {
 						echo "Deployment OK"
 					}
 					else {
