@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 import { Config } from '../shared/Config';
 import { Singup } from './singup';
 import { CommonModule } from '@angular/common';
+declare var $: any;
 @Component({
   selector: 'app-singup',
   templateUrl: './singup.component.html',
@@ -42,6 +43,7 @@ export class SingupComponent implements OnInit {
     this.http.signUp(newUser)
     .subscribe((user: Singup) => {
         console.log(user);
+        $('#exampleModalLong').modal('hide');
     }, (error) => {
       this.errorMessage = error.error;
       ;
