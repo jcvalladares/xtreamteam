@@ -33,14 +33,16 @@ export class SingupComponent implements OnInit {
   get email() {return this.signUpForm.get("email");}
   get password() {return this.signUpForm.get("password");}
   get password2() {return this.signUpForm.get("password2");}
-
+  get IsLoggedIn(): boolean {
+    return localStorage.getItem('token') !== null;
+  }
   onSubmit(newUser: any) {
     newUser.isValidated = "N";
     newUser.isQRCodeGenerated = "N";
     newUser.birthDate = "2010-01-01";
     newUser.token = "";
     newUser.id = null;
-    
+
     this.http.signUp(newUser)
     .subscribe((user: Singup) => {
         console.log(user);
@@ -54,6 +56,7 @@ export class SingupComponent implements OnInit {
 
   constructor(private http: SignupService, private config: Config) { }
   ngOnInit(): void {
+    this.signUpForm.reset();
   }
 
 }

@@ -6,5 +6,5 @@ export class Config
   public serverUrl = 'http://localhost:8080/';
   public loginUrl = this.serverUrl + 'api/login/login';
   public signupUrl = this.serverUrl + 'api/user';
-  public getQrCodeUrl = this.serverUrl + 'api/get_qr?email=test@test.com'; // todo: fix it
+  public getQrCodeUrl = this.serverUrl + 'api/get_qr?';
 }

@@ -22,4 +22,4 @@ INSERT INTO users (ID, FIRST_NAME, LAST_NAME, EMAIL, TYPE, PASSWORD) VALUES
   (3, 'Alex', 'Giannini', 'Alex@Giannini.com', 'Donor', 'xtreamteam!5'),
   (4, 'Manav', 'Agarwal', 'Manav@Agarwal.com', 'Donor', 'xtreamteam!5'),
   (5, 'Anup', 'Shetye', 'Anup@Shetye.com', 'Donor', 'xtreamteam!5'),
-  (6, 'First Name', 'Last Name', 'test@test.com', 'Donor', 'test');
+  (6, 'Richard', 'Kasperowski', 'test@test.com', 'Donor', 'test');
