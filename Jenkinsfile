@@ -32,14 +32,6 @@ node {
 		    dockerImage = docker.build("sfdadocker:${env.BUILD_NUMBER}")
 	    }
 
-	    stage('Sanity Check') {
-		    // flag to toggle whether to automatically build
-		    def flag = 0
-		    if (flag == 1) {
-			    failFast true
-		    }
-	    }
-
 	    stage('Staging Deployment') {
 		    // deploy docker image to nexus
 		    echo "Docker Image Tag Name: ${dockerImageTag}"
