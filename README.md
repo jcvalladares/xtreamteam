@@ -91,13 +91,12 @@
 ![Task 3 After](images/SPRINT3_TASK6.png)
 
 ![Burndown Chart Before](images/SPRINT3_BURNDOWN_CHART_BEFORE.png)
-![Burndown Chart After](images/ SPRINT3_BURNDOWN_CHART_AFTER.png)
+![Burndown Chart After](images/SPRINT3_BURNDOWN_CHART_AFTER.png)
 
 #### RUBRIC: Pair- or Mob-Programming: There is evidence that you paired or mobbed on your code. The evidence could be a photo or video of your team working together, or it could be some other kind of evidence. The evidence is included in your README. (1 point for each team member who participated, up to a maximum of 5 points)
 
 ###### We completed our second PBI (user registration) during a mob programming session. For evidence, we have included pictures of our zoom session.
 
-![Mob Programming 1](images/SPRINT3_MOB_PROGRAMMING1.png)
 ![Mob Programming 1](images/SPRINT3_MOB_PROGRAMMING2.png)
 ![Mob Programming 1](images/SPRINT3_MOB_PROGRAMMING3.png)
 ![Mob Programming 1](images/SPRINT3_MOB_PROGRAMMING4.png)
@@ -108,7 +107,7 @@
 
 ###### After this sprint, our application contains over 30 tests. We did our best to write our micro tests before all coding. Our tests are in five separate files (listed below). Here is a picture of our tests all passing.
 
-[JUnit Execution](images/junits_sprint3.png)
+![JUnit Execution](images/junits_sprint3.png)
 
 ##### BDD Test
 ###### For our BDD test we are using a BDD testing framework called [Spock]( http://spockframework.org/spock/docs/1.3/index.html) . It is very similar to Cucumber. Spock uses JUNIT to run BDD tests. Our initial BDD test will test the login modal, specifically whether registration is successful and the modal disappears after a successful login. Our BDD test can be found at the first link below.
@@ -129,58 +128,58 @@
 
 #### RUBRIC: Sprint Review: Your team conducts a Sprint Review.
 
-###### RUBRIC: Your product increment is working software. The working software is running on a publicly accessible system (this could be a web server, a mobile app store, or something else.) Your README includes evidence that your product increment is working software. Your README includes the URL of the working software, an invitation to test the mobile app, etc. (1 point for each sentence in this rubric element)
+#### RUBRIC: Your product increment is working software. The working software is running on a publicly accessible system (this could be a web server, a mobile app store, or something else.) Your README includes evidence that your product increment is working software. Your README includes the URL of the working software, an invitation to test the mobile app, etc. (1 point for each sentence in this rubric element)
 
-#### Our Product increment is working software. Our application now contains a registration option, a contact page, and a URL with HTTPS.
-#### Project URL: [http://54.219.4.96:8080/](http://54.219.4.96:8080/)
-#### Username: test@test.com
-#### Password: test
+###### Our Product increment is working software. Our application now contains a registration option, a contact page, and a URL with HTTPS.
+###### Project URL: [http://54.219.4.96:8080/](http://54.219.4.96:8080/)
+###### Username: test@test.com
+###### Password: test
 
 
-###### RUBRIC: Continuous Integration: You have a Continuous Integration system running. You only work on the main/trunk/master together—there are no long-lived code branches. The CI system automatically builds your code every time you push to main/trunk/master. The CI system automatically executes all your tests every time it builds the code. You have provided evidence that your CI system exists and behaves properly. (1 point for each sentence in this rubric element
+#### RUBRIC: Continuous Integration: You have a Continuous Integration system running. You only work on the main/trunk/master together—there are no long-lived code branches. The CI system automatically builds your code every time you push to main/trunk/master. The CI system automatically executes all your tests every time it builds the code. You have provided evidence that your CI system exists and behaves properly. (1 point for each sentence in this rubric element
 
-#### During our last Sprint, we created a CI/CD Pipeline with Jenkins that automatically builds, tests and deploys our code any time new code is committed to the Master Branch of our Repository. During this Sprint we improved upon our Jenkins Pipeline and created a detailed diagram (listed below). In addition, our an image of the Jenkins Job is included along with login credentials to access the Jenkins instance.
+###### During our last Sprint, we created a CI/CD Pipeline with Jenkins that automatically builds, tests and deploys our code any time new code is committed to the Master Branch of our Repository. During this Sprint we improved upon our Jenkins Pipeline and created a detailed diagram (listed below). In addition, our an image of the Jenkins Job is included along with login credentials to access the Jenkins instance.
 
 ![CI Pipeline Picture](images/SPRINT3_CI-CD.png)
 
 ![CI Pipeline Picture](images/CI_PIPELINE.png)
 
-#### Our pipeline is called sfp-build-pipeline and can be found on our Jenkins Instance (please log in with credentials below)
+###### Our pipeline is called sfp-build-pipeline and can be found on our Jenkins Instance (please log in with credentials below)
 
-#### URL: [http://54.219.4.96:8081/](http://54.219.4.96:8081/)
+###### URL: [http://54.219.4.96:8081/](http://54.219.4.96:8081/)
 
-#### Login: team3
+###### Login: team3
 
-#### Password: Xtreme123!
+###### Password: Xtreme123!
 
-#### To automatically build and test our code, our GitHub server uses a webhook to push events to our Jenkins instance. If an event is sent, it runs the Jenkinsfile in the server. A detailed log of the events can be found on our pipeline at [http://54.219.4.96:8081/job/sfp-build-pipeline/GitHubPollLog/](http://54.219.4.96:8081/job/sfp-build-pipeline/GitHubPollLog/). Also, the Jenkins file is in the repo and can be found at [https://github.com/jcvalladares/xtreamteam/blob/main/Jenkinsfile](https://github.com/jcvalladares/xtreamteam/blob/main/Jenkinsfile). The file runs the tests with the following command:
+###### To automatically build and test our code, our GitHub server uses a webhook to push events to our Jenkins instance. If an event is sent, it runs the Jenkinsfile in the server. A detailed log of the events can be found on our pipeline at [http://54.219.4.96:8081/job/sfp-build-pipeline/GitHubPollLog/](http://54.219.4.96:8081/job/sfp-build-pipeline/GitHubPollLog/). Also, the Jenkins file is in the repo and can be found at [https://github.com/jcvalladares/xtreamteam/blob/main/Jenkinsfile](https://github.com/jcvalladares/xtreamteam/blob/main/Jenkinsfile). The file runs the tests with the following command:
 
-#### sh "${env.M2\_HOME}/bin/mvn -f ${env.WORKSPACE}/sfda/pom.xml clean install""
+###### sh "${env.M2\_HOME}/bin/mvn -f ${env.WORKSPACE}/sfda/pom.xml clean install""
 
 
-#### In addition, pipeline's console output will confirm that the pipeline builds the application and runs the tests. This can be found at the link below (test confirmation is toward the bottom of the output).
+###### In addition, pipeline's console output will confirm that the pipeline builds the application and runs the tests. This can be found at the link below (test confirmation is toward the bottom of the output).
 
-#### [http://54.219.4.96:8081/job/sfp-build-pipeline/14/console](http://54.219.4.96:8081/job/sfp-build-pipeline/14/console)
+###### [http://54.219.4.96:8081/job/sfp-build-pipeline/14/console](http://54.219.4.96:8081/job/sfp-build-pipeline/14/console)
 
-#### Also, the pipeline automatically generates a report of the tests. This can be found in [http://54.219.4.96:8081/job/sfp-build-pipeline/78/execution/node/3/ws/sfda/target/surefire-reports/](http://54.219.4.96:8081/job/sfp-build-pipeline/78/execution/node/3/ws/sfda/target/surefire-reports/)
+###### Also, the pipeline automatically generates a report of the tests. This can be found in [http://54.219.4.96:8081/job/sfp-build-pipeline/78/execution/node/3/ws/sfda/target/surefire-reports/](http://54.219.4.96:8081/job/sfp-build-pipeline/78/execution/node/3/ws/sfda/target/surefire-reports/)
 
-###### RUBRIC: Continuous Delivery: You have a Continuous Delivery system running. When the build is &quot;green&quot;, the CD system deploys your software to a production environment (&quot;Production&quot;); when the build is &quot;red&quot;, the CD system doesn&#39;t alter Production. The CD system executes additional tests of your software in Production to ensure Production is up and running successfully after deployment. You have provided evidence that your CD system exists and behaves properly
+#### RUBRIC: Continuous Delivery: You have a Continuous Delivery system running. When the build is &quot;green&quot;, the CD system deploys your software to a production environment (&quot;Production&quot;); when the build is &quot;red&quot;, the CD system doesn&#39;t alter Production. The CD system executes additional tests of your software in Production to ensure Production is up and running successfully after deployment. You have provided evidence that your CD system exists and behaves properly
 
-#### Our CD Pipeline also executes within Jenkins. Our pipeline contains a parameter that allows the user to indicate if it wants to deploy the application to production.  If the user indicates a deployment is needed (green), they deploy section will run along with an additional environment tests. If the user does not indicate this (red), it will not run.
+###### Our CD Pipeline also executes within Jenkins. Our pipeline contains a parameter that allows the user to indicate if it wants to deploy the application to production.  If the user indicates a deployment is needed (green), they deploy section will run along with an additional environment tests. If the user does not indicate this (red), it will not run.
 
 ![Pipeline Picture](images/PIPELINE.png)
 
-#### Our pipeline can be found on the Jenkins Instance:
+###### Our pipeline can be found on the Jenkins Instance:
 
-#### URL: [http://54.219.4.96:8081/](http://54.219.4.96:8081/)
-#### Login: team3
-#### Password: Xtreme123!
+###### URL: [http://54.219.4.96:8081/](http://54.219.4.96:8081/)
+###### Login: team3
+###### Password: Xtreme123!
 
-#### For our production environment, we are Dockerizing the application to a new container.
+###### For our production environment, we are Dockerizing the application to a new container.
 
 
 
-###### RUBRIC: Sprint Retrospective: Your team conducts a Sprint Retrospective. All team members participate in the sprint retrospective. As a team, you identify at least one helpful change to improve your effectiveness together. You make a concrete plan for making that change during the next sprint. (Provide evidence. 1 point for each sentence in this rubric element.)
+#### RUBRIC: Sprint Retrospective: Your team conducts a Sprint Retrospective. All team members participate in the sprint retrospective. As a team, you identify at least one helpful change to improve your effectiveness together. You make a concrete plan for making that change during the next sprint. (Provide evidence. 1 point for each sentence in this rubric element.)
 
 #### At the end of our sprint, on NOV 29th, we conducted our Sprint Retrospective. All team members were present.
 
