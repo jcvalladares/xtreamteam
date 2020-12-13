@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
   }
 
   public errorMessage = '';
+  
   ShowLogin()
   {
     localStorage.removeItem('token');

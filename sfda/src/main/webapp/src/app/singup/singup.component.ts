@@ -12,18 +12,20 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./singup.component.css']
 })
 export class SingupComponent implements OnInit {
+  public errorMessage: string = "";
 
   signUpForm = new FormGroup({
-    TYPE: new FormControl('',[Validators.required]),
+    type: new FormControl('',[Validators.required]),
     firstName: new FormControl('', [Validators.required]),
     middleName: new FormControl(''),
     lastName: new FormControl('', [Validators.required]),
     phone: new FormControl('', [Validators.required]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required]),
+    password: new FormControl('', [Validators.required,passwordValidator]),
     password2: new FormControl('')
 
   }, {validators: passwordValidator});
+
   get firstName() {return this.signUpForm.get("firstName");}
   get lastName() {return this.signUpForm.get("lastName");}
   get phone() {return this.signUpForm.get("phone");}
@@ -32,11 +34,17 @@ export class SingupComponent implements OnInit {
   get password2() {return this.signUpForm.get("password2");}
 
   onSubmit(newUser: any) {
+    newUser.isValidated = "N";
+    newUser.isQRCodeGenerated = "N";
+    newUser.birthDate = "2010-01-01";
+    newUser.token = "";
 
     this.http.signUp(newUser)
     .subscribe((user: Singup) => {
         console.log(user);
     }, (error) => {
+      this.errorMessage = error.error;
+      ;
       console.log(error);
     });
   }
