@@ -174,6 +174,14 @@
 
 
 
+#### RUBRIC: Practice Sprint Presentation
+
+###### We practiced our presentation on Sunday 12/13. Pictures are listed below.
+![Pipeline Picture](images/SPRINT3_PRACTICE1.png)
+![Pipeline Picture](images/ SPRINT3_PRACTICE2.png)
+![Pipeline Picture](images/ SPRINT3_PRACTICE3.png)
+
+
 #### RUBRIC: Sprint Retrospective: Your team conducts a Sprint Retrospective. All team members participate in the sprint retrospective. As a team, you identify at least one helpful change to improve your effectiveness together. You make a concrete plan for making that change during the next sprint. (Provide evidence. 1 point for each sentence in this rubric element.)
 
 #### At the end of our sprint, on NOV 29th, we conducted our Sprint Retrospective. All team members were present.
