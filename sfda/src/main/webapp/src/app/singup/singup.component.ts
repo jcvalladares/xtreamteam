@@ -39,15 +39,16 @@ export class SingupComponent implements OnInit {
     newUser.isQRCodeGenerated = "N";
     newUser.birthDate = "2010-01-01";
     newUser.token = "";
-
+    newUser.id = null;
+    
     this.http.signUp(newUser)
     .subscribe((user: Singup) => {
         console.log(user);
-        $('#exampleModalLong').modal('hide');
-    }, (error) => {
+        $('#singup').modal('hide');
+        this.signUpForm.reset();
+        }, (error) => {
       this.errorMessage = error.error;
-      ;
-      console.log(error);
+       console.log(error);
     });
   }
 

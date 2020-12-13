@@ -58,6 +58,9 @@ public class UsersController {
 		if( !UserDetailsValidator.isValidPhone(user.getPhone())) {
 			return  new ResponseEntity<>("Phone format is incorrect", HttpStatus.BAD_REQUEST);
 		}
+		List<Users> users = usersService.findAll();
+		long id = users.size();
+		user.setId(id++);
 		resource = usersService.saveUser(user);
 		return ResponseEntity.ok(resource);
 	}

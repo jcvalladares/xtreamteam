@@ -46,6 +46,10 @@ public class UsersService {
 		return usersRepository.save(users);
 	}
 
+	public List<Users> findAll() {
+		return usersRepository.findAll();
+	}
+
 	public Users resetPassword(Users users) {
 		List<Users> userList = usersRepository.findAll();
 		// TODO - scan all users and check if user exists
