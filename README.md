@@ -59,13 +59,13 @@
 
 ###### We decomposed our user stories into developer tasks. They are listed in our sprint backlog and can be found on our [Kanban Board]( https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=SFDA&selectedIssue=SFDA-3). 
 
-###### Your sprint backlog, including both the user stories and developer tasks, is represented in a kanban board (1 point). The URL of the kanban board is documented in your README (1 point). Course staff can view the kanban board (1 point).
+#### Your sprint backlog, including both the user stories and developer tasks, is represented in a kanban board (1 point). The URL of the kanban board is documented in your README (1 point). Course staff can view the kanban board (1 point).
 
-#### our Kanban board can be found at https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=SFDA&selectedIssue=SFDA-3
+###### our Kanban board can be found at https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=SFDA&selectedIssue=SFDA-3
 
-###### RUBRIC: You have a sprint burndown chart. On the x-axis, you display time markers in units of 1 day. On the y-axis, you display story points remaining to get done. There is a linear curve descending from left to right; the leftmost point of the curve is number of story points in your sprint at sprint day 1; the rightmost point is 0 story points remaining on the last day of the sprint. The burndown chart, or the URL of the burndown chart, is document in your README. Course staff can view the burndown chart. (1 point for each sentence you complete)
+#### RUBRIC: You have a sprint burndown chart. On the x-axis, you display time markers in units of 1 day. On the y-axis, you display story points remaining to get done. There is a linear curve descending from left to right; the leftmost point of the curve is number of story points in your sprint at sprint day 1; the rightmost point is 0 story points remaining on the last day of the sprint. The burndown chart, or the URL of the burndown chart, is document in your README. Course staff can view the burndown chart. (1 point for each sentence you complete)
 
-#### For our Sprint Burndown Chart we used an excel spreadsheet adapted from a template that we found a website called coria.com (Full URL: https://www.coria.com/insights/blog/project-management/how-to-create-a-burndown-chart-in-excel). The a pdf title Sprint3_Burdown is located in the Repo. Also, a picture is attached:
+###### For our Sprint Burndown Chart we used an excel spreadsheet adapted from a template that we found a website called coria.com (Full URL: https://www.coria.com/insights/blog/project-management/how-to-create-a-burndown-chart-in-excel). The a pdf title Sprint3_Burdown is located in the Repo. Also, a picture is attached:
 
 ![Sprint3 Burndown](images/SPRINT3_BURNDOWN_CHART.png)
 
