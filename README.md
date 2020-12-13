@@ -135,9 +135,7 @@
 
 #### RUBRIC: Continuous Integration: You have a Continuous Integration system running. You only work on the main/trunk/master together—there are no long-lived code branches. The CI system automatically builds your code every time you push to main/trunk/master. The CI system automatically executes all your tests every time it builds the code. You have provided evidence that your CI system exists and behaves properly. (1 point for each sentence in this rubric element
 
-###### During our last Sprint, we created a CI/CD Pipeline with Jenkins that automatically builds, tests and deploys our code any time new code is committed to the Master Branch of our Repository. During this Sprint we improved upon our Jenkins Pipeline and created a detailed diagram (listed below). In addition, our an image of the Jenkins Job is included along with login credentials to access the Jenkins instance.
-
-![CI Pipeline Picture](images/SPRINT3_CI-CD.png)
+###### During our last Sprint, we created a CI/CD Pipeline with Jenkins that automatically builds, tests and deploys our code any time new code is committed to the Master Branch of our Repository. In addition, an image of the Jenkins Job is included along with login credentials to access the Jenkins instance.
 
 ![CI Pipeline Picture](images/CI_PIPELINE.png)
 
