@@ -1,7 +1,7 @@
 
 export class IUser {
   public Id: string;
-  public TYPE: string;
+  public type: string;
   public email: string;
   public password: string;
   public firstName: string;

@@ -9,12 +9,14 @@ import { LoginComponent } from './login/login.component';
 import { SingupComponent } from './singup/singup.component';
 import { LoginService } from './login/login.service';
 import { FormsModule, NgControl, ReactiveFormsModule } from '@angular/forms';
+import { QrcodeComponent } from './qrcode/qrcode.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SingupComponent
+    SingupComponent,
+    QrcodeComponent
 
   ],
   imports: [

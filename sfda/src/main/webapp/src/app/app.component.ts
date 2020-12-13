@@ -1,3 +1,4 @@
+import { IUser } from './shared/IUser';
 import { Config } from './shared/Config';
 import { Component } from '@angular/core';
 
@@ -8,10 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'WebApp';
-  url = this.config.getQrCodeUrl;
 
   get IsLoggedIn(): boolean {
     return localStorage.getItem('token') !== null;
   }
-  constructor(private config: Config){}
+  constructor(private config: Config){ }
+  
 }

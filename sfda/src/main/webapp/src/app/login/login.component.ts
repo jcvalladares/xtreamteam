@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   }
 
   public errorMessage = '';
-  
+
   ShowLogin()
   {
     localStorage.removeItem('token');
@@ -44,15 +44,16 @@ export class LoginComponent implements OnInit {
       localStorage.removeItem('token');
       this.errorMessage = '';
       this.loginServices.Login(user.login, user.password)
-        .subscribe((token: IUser) => {
+        .subscribe((user: IUser) => {
           // this.token = token;
+          let userStr = JSON.stringify(user);
+          localStorage.setItem('user',userStr);
           localStorage.setItem('token', '1');
           $('#exampleModalLong').modal('hide');
         }, (error) => {
           localStorage.removeItem('token');
-
+          localStorage.removeItem('user');
           this.errorMessage = 'User and Password Incorrect';
-
         });
    }
 

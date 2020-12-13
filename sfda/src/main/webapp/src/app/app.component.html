@@ -4,14 +4,15 @@
     <div class="p-2">
       <app-login></app-login>
     </div>
-    <div class="p-2"><app-singup></app-singup></div> 
+    <div class="p-2"><app-singup></app-singup></div>
   </div>
   <div class= "container"[hidden]="!IsLoggedIn">
     <div class="jumbotron">
       <h1 class="display-4">Welcome to Supply Food System</h1>
       <p class="lead">We are committed to help you during this pandemic.</p>
       <hr class="my-4">
-      <img src="{{url}}" alt="Italian Trulli"/>
+      <app-qrcode></app-qrcode>
+      
     </div>
   </div>
   <div class="container"  [hidden]="IsLoggedIn">
