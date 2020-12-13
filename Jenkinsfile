@@ -69,8 +69,8 @@ node {
 				}
 				}
 			stage("Production Deployment Check") {
-			    def ret_code = sh(script: "curl --fail -s -o /dev/null -w '%{http_code}' http://www.google.com/", returnStdout: true).trim()
-					if (ret_code == "000") {
+			    def ret_code = sh(script: "curl --fail -s -o /dev/null -w '%{http_code}' http://www.foodtrust.me/", returnStdout: true).trim()
+					if (ret_code == "200") {
 						echo "Deployment OK"
 					}
 					else {
