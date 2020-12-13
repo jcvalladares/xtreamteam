@@ -47,11 +47,18 @@ public class UsersController {
 	public ResponseEntity<?> saveUser(@RequestBody Users user) {
 		log.info("UsersController:  list users");
 		Users resource = null;
-		if(UserDetailsValidator.isValidEmail(user.getEmail()) && UserDetailsValidator.isValidPhone(user.getPhone())) {
-			user.setPhone(user.getPhone().replaceAll("[-, ]", ""));
-			resource = usersService.saveUser(user);
+		Users userAdded = usersService.findUser(user.getEmail());
+		if (userAdded != null)
+		{
+			return  new ResponseEntity<>("User has been registered previously.", HttpStatus.BAD_REQUEST);
 		}
 
+		if (!UserDetailsValidator.isValidEmail(user.getEmail()))
+			return  new ResponseEntity<>("Email format is incorrect", HttpStatus.BAD_REQUEST);
+		if( !UserDetailsValidator.isValidPhone(user.getPhone())) {
+			return  new ResponseEntity<>("Phone format is incorrect", HttpStatus.BAD_REQUEST);
+		}
+		resource = usersService.saveUser(user);
 		return ResponseEntity.ok(resource);
 	}
 	

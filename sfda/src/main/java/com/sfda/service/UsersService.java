@@ -31,11 +31,15 @@ public class UsersService {
 		if (loggedinUsers != null && StringUtils.equals(loggedinUsers.get().getPassword(), password)) {
 			return loggedinUsers.get();
 		}
+
 		return null;
 	}
 	public Users findUser(String email) {
 		Optional<Users> loggedinUsers = Optional.ofNullable(usersLoginRepository.findByEmail(email));
-		return loggedinUsers.get();
+		if(loggedinUsers.isPresent()){
+			return loggedinUsers.get();
+		}
+		return null;
 	}
 
 	public Users saveUser(Users users) {
