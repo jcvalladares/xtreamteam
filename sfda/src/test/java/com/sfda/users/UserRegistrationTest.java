@@ -12,12 +12,12 @@ import com.sfda.entity.Users;
 import com.sfda.util.UserDetailsValidator;
 
 public class UserRegistrationTest {
-	
+
 	@Test
 	public void junitWorksProperly() {
 		assertTrue(true);
 	}
-	
+
 	@Test
 	public void testValidPassword() {
 		Users donor = new Users();
@@ -28,7 +28,7 @@ public class UserRegistrationTest {
 		donor.setPassword("t3stPassw0rd@1");
 		assertTrue(UserDetailsValidator.validatePassword(donor));
 	}
-	
+
 	@Test
 	public void testValidFirstNameLastName() {
 		Users donor = new Users();
@@ -39,7 +39,7 @@ public class UserRegistrationTest {
 		donor.setPassword("t3stPassw0rd@1");
 		assertTrue(UserDetailsValidator.validateFirstAndLastName(donor));
 	}
-	
+
 	@Test
 	public void testSqlInjections() {
 		Users donor = new Users();
@@ -53,7 +53,7 @@ public class UserRegistrationTest {
 		donor.setPhone("1234567890");
 		assertTrue(UserDetailsValidator.checkSqlInjections(donor));
 	}
-	
+
 	@Test
 	public void testValidBirthDate() {
 		Users donor = new Users();
@@ -65,7 +65,7 @@ public class UserRegistrationTest {
 		donor.setPassword("t3stPassw0rd@1");
 		assertTrue(UserDetailsValidator.validateBirthDate(donor));
 	}
-	
+
 	@Test
 	public void testValidMiddleName() {
 		Users donor = new Users();
@@ -77,7 +77,7 @@ public class UserRegistrationTest {
 		donor.setPassword("t3stPassw0rd@1");
 		assertTrue(UserDetailsValidator.validateMiddleName(donor));
 	}
-	
+
 	@Test
 	public void testValidUserTypeISelected() {
 		Users donor = new Users();
@@ -103,7 +103,7 @@ public class UserRegistrationTest {
 		donor.setBirthDate(new Date(c.getTime().getTime()));
 		assertTrue(UserDetailsValidator.validateAndUpdateAge(donor).getAge() == 20);
 	}
-	
+
 	@Test
 	public void testIfAllRequiredFieldsAreNotEmpty() {
 		Users donor = new Users();
@@ -120,7 +120,7 @@ public class UserRegistrationTest {
 		donor.setBirthDate(new Date(c.getTime().getTime()));
 		assertTrue(UserDetailsValidator.validateRequiredFieldsAreNotEmpty(donor));
 	}
-	
+
 	@Test
 	public void testCheckIfUserIs18YearsOld() {
 		Users donor = new Users();
@@ -135,7 +135,7 @@ public class UserRegistrationTest {
 		donor.setBirthDate(new Date(c.getTime().getTime()));
 		assertTrue(UserDetailsValidator.validateAndUpdateAge(donor).getAge() > 18);
 	}
-	
+
 	@Test
 	public void testTokenIsGenerated() {
 		Users user = new Users();
