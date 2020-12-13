@@ -52,7 +52,7 @@ class SfdaBehaviroalTest extends Specification {
 		user.setPhone("1234567890")
 
 		and: "User wants to get registered as a Donor"
-		user.setType("DONOR")
+		user.setType("FAMILY")
 
 		and: "Login and UserLogin repository are able to save the user details to data store"
 		usersRepositoryStub.save(user) >> user
