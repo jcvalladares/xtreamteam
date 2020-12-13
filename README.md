@@ -1,7 +1,7 @@
 [![Build Status](http://54.219.4.96:8081/buildStatus/icon?job=sfp-build-pipeline)](http://54.219.4.96:8081/job/sfp-build-pipeline/)
 
 # Xtream Team
-# README - Sprint 2
+# README - Sprint 3
 
 ### Project Name: Secure Food Distribution App
 
@@ -16,132 +16,132 @@
 #### Username: test@test.com
 #### Password: test
 
-## Sprint Planning 11.21
+## 12/1 Sprint Planning
 
-###### RUBRIC: Sprint Planning: You have a forecast of how many story points your team can complete during the sprint. The forecast is documented in your README.
+#### RUBRIC: You have a forecast of how many story points your team can complete during the sprint. The forecast is documented in your README
 
-#### For our Sprint Goal, we estimate that we will be able to complete 50 points.
+###### We forecast that we will complete 50 story points.
 
-###### RUBRIC: The rationale for your forecast is documented in your README
+#### RUBRIC: Your rationale for your forecast is documented in your README
 
-#### Last Sprint, we estimated 75 story points but were only able to complete about a little over half. Since our time-constraints are similar for this next we are estimating 50 points this Sprint.
+###### In Sprint 1, we estimated 75 but were unable to get close to our goal. In Sprint 2, we estimated 50 and that was closer to our actual velocity. For Sprint 3, we will estimate that we will have the approximately the same amount of time as sprint 2, and so are forecasting 50 story points. 
 
-#### Our goal is to expand on our existing MVP. Last Sprint, we built an application that only contains a home page (the team decided the Home Page was the most essential part of the app because it allows the site to be found via search engines). In this coming sprint, we plan to create a login functionality, as well as a QR Code.
 
-###### RUBRIC: You pulled stories into your sprint backlog.
+#### RUBRIC: You pulled stories into your sprint backlog. You pulled stories from the top of your product backlog. The aggregate size of the stories does not exceed your forecast. Development Team members participated in this activity (and in your project README, you made a statement or provided evidence that only Development Team members participated in this activity). (1 point for each item)
 
-#### Our Sprint Backlog can be found at [https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&amp;projectKey=SFDA&amp;selectedIssue=SFDA-12](https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&amp;projectKey=SFDA&amp;selectedIssue=SFDA-12) and includes three product backlog items totaling 47 Story points.
+###### We pulled four User Stories into our Backlog. The aggregate size of the stories is 47, which is less than our forecast. Only development team members participated in this activity.
 
-###### RUBRIC: You pulled stories from the top of your product backlog.
 
-#### Our Sprint Backlog includes the next three items on our Product Backlog.
 
-###### RUBRIC: The aggregate size of the stories does not exceed your forecast.
+#### RUBRIC: All of the stories in your sprint backlog are the right size: the size of each backlog item is less than half your forecast velocity for the sprint. If you noticed PBIs that are too large to get done in a sprint, you refined them by splitting them into smaller stories and estimating the smaller stories
 
-#### Our forecast was 50, and the Aggregate Size of our stories are 47.
+###### There are no user stories in our Backlog that are greater than half of the forecast velocity. We did take some time to analyze the backlog and modified the order and the Security PBI. For this sprint we have 4 PBI. They include:
 
-###### RUBRIC: Development Team members participated in this activity (and in your project README, you made a statement or provided evidence that only Development Team members participated in this activity). (1 point for each item)
+###### Sign Up Functionality for Recipients – 13 Story Points
+###### User Story: As a charity recipient, I want to be able to sign up so I can start receiving help.
+###### Acceptance Criteria: Recipients can register via a form.
 
-#### Only our Development team participated in the Sprint Planning Session.
 
-###### RUBRIC: All of the stories in your sprint backlog are the right size: the size of each backlog item is less than half your forecast velocity for the sprint. If you noticed PBIs that are too large to get done in a sprint, you refined them by splitting them into smaller stories and estimating the smaller stories.
+###### Donor Profile Creation - 13 Story Points 
+###### User Story: As a donor, I want to be able to sign up so I can start donating money.
+###### Acceptance Criteria: Donor can register via a form.
 
-#### We took some time to consider Backlog. Our PBI&#39;s were not too large, however we decided to refine our Product Backlog by creating a new PBI. We then modified the order of the backlog but did not need to change any of the existing PBIs.
 
-#### We have three user stories in our Sprint backlog. They are:
+###### Contact Page - 8 Story Points 
+###### User Story: As an app user, I need to be able to contact someone if there are any issues
+###### Acceptance Criteria: App user can send automatic email via contact form page on site.
 
-#### Create QR Code : ESTIMATION 21
+###### Secure Website – 13 Story Points
+###### User Story: As an app user, I want the applciation to be secure so I can safely use it.
+###### Acceptance Criteria: https and domain name registration.
 
-#### Story: As a Family, I need to get QR Code online to be identified for Humanitarian Relief
+#### You decomposed user stories into developer tasks (1 point). The tasks are clearly listed in your sprint backlog (1 point
 
-#### Acceptance Criteria: A page is created on the site that displays a unique QR Code every time is is loaded. A database is created to store each QR code and confirm unique ones are being generated
+###### We decomposed our user stories into developer tasks. They are listed in our sprint backlog and can be found on our [Kanban Board]( https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=SFDA&selectedIssue=SFDA-3). 
 
-#### Build Login Page : ESTIMATION 13
+###### Your sprint backlog, including both the user stories and developer tasks, is represented in a kanban board (1 point). The URL of the kanban board is documented in your README (1 point). Course staff can view the kanban board (1 point).
 
-#### Story: As an app user, I need a page to login
-
-#### Acceptance Criteria: A page must be created that allow the user to login. Login should not occur if username and password are not in database.
-
-#### Remove Unnecessary Elements From Product Increment: ESTIMATION 13
-
-#### User Story: As an app user (donor, family, NPO), I want the application to only contain working elements. Any unworking elements will diminish my confidence in the application.
-
-#### Acceptance Criteria: Home page should not contain and broken links and the Sign Up Page&#39;s validation should work or not be present.
-
-###### RUBRIC: You decomposed user stories into developer tasks (1 point). The tasks are clearly listed in your sprint backlog (1 point).
-
-#### We decomposed our user stories into developer tasks. These can be found on our Kanban board at [https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&amp;projectKey=SFDA&amp;selectedIssue=SFDA-129](https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&amp;projectKey=SFDA&amp;selectedIssue=SFDA-129) .
-
-###### RUBRIC: Your sprint backlog, including both the user stories and developer tasks, is represented in a kanban board (1 point). The URL of the kanban board is documented in your README (1 point). Course staff can view the kanban board (1 point).
-
-#### Our Kanban Board can be found on our JIRA page @[https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&amp;projectKey=SFDA&amp;selectedIssue=SFDA-12](https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&amp;projectKey=SFDA&amp;selectedIssue=SFDA-12)
+#### our Kanban board can be found at https://xtremeteam3.atlassian.net/secure/RapidBoard.jspa?rapidView=1&projectKey=SFDA&selectedIssue=SFDA-3
 
 ###### RUBRIC: You have a sprint burndown chart. On the x-axis, you display time markers in units of 1 day. On the y-axis, you display story points remaining to get done. There is a linear curve descending from left to right; the leftmost point of the curve is number of story points in your sprint at sprint day 1; the rightmost point is 0 story points remaining on the last day of the sprint. The burndown chart, or the URL of the burndown chart, is document in your README. Course staff can view the burndown chart. (1 point for each sentence you complete)
 
-#### For our Sprint Burndown Chart we decided to use an excel spreadsheet. To do this, we adapted it from a template that we found a website called coria.com (Full URL: https://www.coria.com/insights/blog/project-management/how-to-create-a-burndown-chart-in-excel). The a pdf title Sprint2_Burdown is located in the Repo. Also, a picture is attached:
+#### For our Sprint Burndown Chart we used an excel spreadsheet adapted from a template that we found a website called coria.com (Full URL: https://www.coria.com/insights/blog/project-management/how-to-create-a-burndown-chart-in-excel). The a pdf title Sprint3_Burdown is located in the Repo. Also, a picture is attached:
 
-![Sprint2 Burndown](images/SPRINT2_BURNDOWN_CHART.png)
+![Sprint3 Burndown](images/SPRINT3_BURNDOWN_CHART.png)
 
-###### RUBRIC: Daily Scrum: You have conducted multiple Daily Scrums. You document evidence of at least one daily scrum in your README your daily scrums, you discussed: what did you do in the last 24 hours that helped the Development Team meet the Sprint Goal? In your README, document which team members did which activities. (1 point for each team member&#39;s response, up to a maximum of 5 points)
+#### RUBRIC: Daily Scrum: You have conducted multiple Daily Scrums. You document evidence of at least one daily scrum in your README your daily scrums, you discussed: what did you do in the last 24 hours that helped the Development Team meet the Sprint Goal? In your README, document which team members did which activities. (1 point for each team member&#39;s response, up to a maximum of 5 points)
 
-###### RUBRIC: In your daily scrums, you discussed: what will you do in the next 24 hours to help the Development Team meet the Sprint Goal? In your README, document which team members plan to do which activities. (1 point for each team member&#39;s response, up to a maximum of 5 points
+#### RUBRIC: In your daily scrums, you discussed: what will you do in the next 24 hours to help the Development Team meet the Sprint Goal? In your README, document which team members plan to do which activities. (1 point for each team member&#39;s response, up to a maximum of 5 points
 
-###### RUBRIC: In your daily scrums, you discussed: do you see any impediment that prevents you or the Development Team from meeting the Sprint Goal? What are the impediments? What is your impediment removal plan? (1 point for each question answered)
+#### RUBRIC: In your daily scrums, you discussed: do you see any impediment that prevents you or the Development Team from meeting the Sprint Goal? What are the impediments? What is your impediment removal plan? (1 point for each question answered)
 
-#### Notes from three daily scrums can be found at the bottom of the README. We discussed our impediments, what we did in the last 24 Hours and what we planned to do in the next 24 hours.
+###### Notes from our Daily Scrums can be found at the bottom of this document. We discussed our impediments, what we had done in the previous 24 Hours, and what we were planning to do in the next 24 hours.
 
-###### RUBRIC: Every day during the sprint, update your sprint task board and burndown chart. Provide evidence (URLs or images) in your README to show that you did this. (1 point for each time you updated your tracking indicators, up to a maximum of 2 points)
+#### RUBRIC: Every day during the sprint, update your sprint task board and burndown chart. Provide evidence (URLs or images) in your README to show that you did this. (1 point for each time you updated your tracking indicators, up to a maximum of 2 points)
 
-#### When we met, we updated our task list and burndown chart. We have included four pictures: Before and After of our Kanban Board and Before and after of our Burndown Chart.
+#### When we met, we did our best to update our task list and burndown chart with any relevant items. We have included four pictures: Before and After of our Kanban Board and Before and after of our Burndown Chart.
 
-![Task 1 Before](images/TASK1_BEFORE.png)
-![Task 1 After](images/TASK1_AFTER.png)
-![Task 2 Before](images/TASK2_BEFORE.png)
-![Task 2 Before](images/TASK2_AFTER.png)
+![Task 1 Before](images/SPRINT3_TASK1.png)
+![Task 1 After](images/SPRINT3_TASK2.png)
 
-###### RUBRIC: Pair- or Mob-Programming: There is evidence that you paired or mobbed on your code. The evidence could be a photo or video of your team working together, or it could be some other kind of evidence. The evidence is included in your README. (1 point for each team member who participated, up to a maximum of 5 points)
+![Task 2 Before](images/SPRINT3_TASK3.png)
+![Task 2 After](images/SPRINT3_TASK4.png)
 
-#### We completed our first task together during a mob programming session. For evidence, we have included pictures of our zoom session.
+![Task 3 Before](images/SPRINT3_TASK5.png)
+![Task 3 After](images/SPRINT3_TASK6.png)
 
-![Mob Programming 1](images/MOB_PROGRAMMING_1.png)
-![Mob Programming 2](images/MOB_PROGRAMMING_2.png)
-![Mob Programming 3](images/MOB_PROGRAMMING_3.png)
+![Burndown Chart Before](images/SPRINT3_BURNDOWN_CHART_BEFORE.png)
+![Burndown Chart After](images/ SPRINT3_BURNDOWN_CHART_AFTER.png)
+
+#### RUBRIC: Pair- or Mob-Programming: There is evidence that you paired or mobbed on your code. The evidence could be a photo or video of your team working together, or it could be some other kind of evidence. The evidence is included in your README. (1 point for each team member who participated, up to a maximum of 5 points)
+
+###### We completed our second PBI (user registration) during a mob programming session. For evidence, we have included pictures of our zoom session.
+
+![Mob Programming 1](images/SPRINT3_MOB_PROGRAMMING1.png)
+![Mob Programming 1](images/SPRINT3_MOB_PROGRAMMING2.png)
+![Mob Programming 1](images/SPRINT3_MOB_PROGRAMMING3.png)
+![Mob Programming 1](images/SPRINT3_MOB_PROGRAMMING4.png)
+![Mob Programming 1](images/SPRINT3_MOB_PROGRAMMING5.png)
 
 
-###### RUBRIC: Test-Driven Development: There is evidence that you are building your product test-first. There are at least 20 micro-scale unit tests in your test suite, and they all pass. (1 point for each \*new\* unit test that you created in this sprint, up to a maximum of 10 points)
+#### RUBRIC: Test-Driven Development: There is evidence that you are building your product test-first. There is at least 1 BDD/A-TDD test in your test suite, and it passes. There are at least 30 micro-scale unit tests in your test suite, and they all pass. (1 point for the BDD test. 1 point for each *new* unit test that you created in this sprint, up to a maximum of 10 points
 
-![JUnit Execution](images/junits_sprint2.png)
+###### After this sprint, our application contains over 30 tests. We did our best to write our micro tests before all coding. Our tests are in five separate files (listed below). Here is a picture of our tests all passing.
 
-#### Our application contains over 20 tests. The last sprint we lost points because the tests were written after the code and did not cover all of the functionality. This Sprint, we did things differently by writing our tests before coding and creating micro tests to explore individual functionalities like form validation. Our tests are in three separate files and can be found at:
+[JUnit Execution](images/junits_sprint3.png)
 
-#### [https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/UsersApplicationTests.java](https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/UsersApplicationTests.java)
+##### BDD Test
+###### For our BDD test we are using a BDD testing framework called [Spock]( http://spockframework.org/spock/docs/1.3/index.html) . It is very similar to Cucumber. Spock uses JUNIT to run BDD tests. Our initial BDD test will test the login modal, specifically whether registration is successful and the modal disappears after a successful login. Our BDD test can be found at the first link below.
 
-#### [https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/SFDAUserValidatorTest.java](https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/SFDAUserValidatorTest.java)
+###### [https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/groovy/com/sfda/test/SfdaBehaviroalTest.groovy](https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/groovy/com/sfda/test/SfdaBehaviroalTest.groovy)
 
-#### [https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/util/QRCodeGeneratorTest.java](https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/util/QRCodeGeneratorTest.java)
+##### Other Tests
 
-###### RUBRIC: Sprint Review: Your team conducts a Sprint Review.
+###### [https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/UsersApplicationTests.java](https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/UsersApplicationTests.java)
 
-#### Our Sprint Review was conducted at the end of our Sprint on NOV 30. We all felt positive about the changes we implemented and felt that we were able to increase our productivity.
+###### [https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/SFDAUserValidatorTest.java](https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/SFDAUserValidatorTest.java)
+
+###### [https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/util/QRCodeGeneratorTest.java](https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/util/QRCodeGeneratorTest.java)
+
+
+[https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/UserRegistrationTest.java]( https://github.com/jcvalladares/xtreamteam/blob/main/sfda/src/test/java/com/sfda/users/UserRegistrationTest.java)
+
+
+#### RUBRIC: Sprint Review: Your team conducts a Sprint Review.
 
 ###### RUBRIC: Your product increment is working software. The working software is running on a publicly accessible system (this could be a web server, a mobile app store, or something else.) Your README includes evidence that your product increment is working software. Your README includes the URL of the working software, an invitation to test the mobile app, etc. (1 point for each sentence in this rubric element)
 
-#### Our Product increment is working software. Our application displays a unique QR code for each logged in user. Since we have not yet implemented registration, please log in with the uername and password provided below.
-
+#### Our Product increment is working software. Our application now contains a registration option, a contact page, and a URL with HTTPS.
 #### Project URL: [http://54.219.4.96:8080/](http://54.219.4.96:8080/)
 #### Username: test@test.com
 #### Password: test
 
 
-###### RUBRIC: At least one stakeholder attends your sprint review, and you provide evidence that your stakeholder was there. You revise your product backlog based on the feedback you receive. (1 point for each sentence in this rubric item)
-
-#### During our Sprint Review, a stakeholder, Maybel Salgado, attended. She represented the families in need. She is a graphic designer and commented on the look and feel of the site. She gave all positive feedback so we will continue with our current graphic layout plan moving forward. As a result, we did not need to revise our Product Backlog, but will keep her feedback in mind if we need to create any additional products backlog items. Pictures are below.
-
-![Stakeholder Picture](images/stakeholder_picture.png)
-
 ###### RUBRIC: Continuous Integration: You have a Continuous Integration system running. You only work on the main/trunk/master together—there are no long-lived code branches. The CI system automatically builds your code every time you push to main/trunk/master. The CI system automatically executes all your tests every time it builds the code. You have provided evidence that your CI system exists and behaves properly. (1 point for each sentence in this rubric element
 
-#### We built our CI Pipeline with Jenkins. It is running on a Docker container on our server. It automatically builds every time we push our code to the repo. After building, it automatically executes our tests.
+#### During our last Sprint, we created a CI/CD Pipeline with Jenkins that automatically builds, tests and deploys our code any time new code is committed to the Master Branch of our Repository. During this Sprint we improved upon our Jenkins Pipeline and created a detailed diagram (listed below). In addition, our an image of the Jenkins Job is included along with login credentials to access the Jenkins instance.
+
+![CI Pipeline Picture](images/SPRINT3_CI-CD.png)
 
 ![CI Pipeline Picture](images/CI_PIPELINE.png)
 
@@ -178,6 +178,8 @@
 
 #### For our production environment, we are Dockerizing the application to a new container.
 
+
+
 ###### RUBRIC: Sprint Retrospective: Your team conducts a Sprint Retrospective. All team members participate in the sprint retrospective. As a team, you identify at least one helpful change to improve your effectiveness together. You make a concrete plan for making that change during the next sprint. (Provide evidence. 1 point for each sentence in this rubric element.)
 
 #### At the end of our sprint, on NOV 29th, we conducted our Sprint Retrospective. All team members were present.
@@ -195,75 +197,83 @@
 #### SOLUTION; Moving forward, the developers without version control experience will spend time researching it.
 
 
-## DAILY_SCRUM 1 11.21
 
-Impediments
+## Daily Scrum Notes
 
-WEB SERVER ISSUE: One impediment is that our web server has a bug that is causing it to shut down.
+### Daily Scrum 1
 
-Impediment Removal Plan: We have identified our Angular Server as the cause of the issue. To remove the impediment, we will change our server configuration to serve a static webpage.
 
-WEB SERVER ISSUE: Another impediment we identified was that our skill sets do not overlap.
+##### Past 24 Hours
+Alex G - Sprint Planning Session. Reviewed information regarding Sprint retrospectives.
+Juan - Sprint Planning Session. Home Page/Login Screen. 
+Anup - Sprint Planning Session. Wrapping up the controlling.
+Prashant - Sprint Planning Session. Reviewed information for Product Owner Presentation.
+Manav - Sprint Planning Session. Added production server to the pipeline. Server is running on port 80. Linked to domain. Working on https.
 
-IMPEDIMENT REMOVAL PLAN: To remove this impediment, we have identified technologies that we are all familiar with. We plan to use these.
+##### Impediments
+IMPEDIMENT: Web API not responding properly to a POST request.
+SOLUTION: Juan will continue trying different approaches and if needed, we will modify the back end. 
 
-Past 24 Hours
+IMPEDIMENT: The whole group has to do a Sprint Retrospective in fron of the whole class
+SOLUTION: we will continue to research how to do an awesome Sprint Retrospective
 
-Alex G: Sprint Planning and Product Backlog Refinement. Considered how we could improve the next sprint
+IMPEDIMENT: With the semester ending, we all have increased deadlines for other classes
+SOLUTION: we will meet regularly even if for shorter time period to ensure that we get everything can accomplished
 
-Prashant: Sprint Planning Session and Product Backlog Refinement. Considered TDD Approaches.
 
-Juan: Sprint Planning Session and Product Backlog Refinement. Researched Spring/Boot on Pluralsight
+##### Next 24 Hours
+Alex G - Begin the README. Start adding current info the the README.
+Prashant - Will be working on PPT in preparation for the presentation. 
+Anup - Will create test cases and  complete the controller for the registration functionality.
+Manav - Will create the https. 
+Juan - Complete Integration w/Web API (see impediment). 
 
-Anup: Spring Planning Session and Product Backlog Refinement. Considered TDD Approaches.
 
-Manav: Sprint Planning Session and Product Backlog Refinement. Considered Web Server Approaches.
 
-Next 24 Hours:
 
-Alex: Re Write README to line up with Rubric. Mob Programming to fix impediment.
 
-Prashant: Create CI/CD Pipeline. Mob Programming to fix impediment.
+### Daily Scrum 2 
 
-Juan: Create Log In Page. Mob Programming to fix impediment.
 
-Anup: Work on Web App. Improve TDD approach. Mob Programming to fix impediment.
+##### Past 24 Hours
+Alex G - Worked on the README. Added more info to out notes.
+Juan - Worked with Anup to create a plan to integrate with the Web API
+Anup - worked with juan to create a plan for the API integration. 
+Prashant - began working on presentation and worked on BDD page.
+Manav - configured https. created contact page. 
 
-Manav: Deploy CI/CD Pipeline on Server. Mob Programming to fix impediment.
+##### Impediments
+IMPEDIMENT: We have a lot of work and this is a busy week. 
+SOLUTION: be sure to manage our time and keep eachother posted if anything comes up. Also we will keep Saturday open as an optional day to work if needed. 
 
-## DAILY\_SCRUM 2 11.21
 
-**Past 24 Hours**
 
-Alex: Rewrote README to line up with Rubric
+##### Next 24 Hours
+Alex G - Will continue working on the README, and research Sprint Retrospective approaches. 
+Prashant - Will continue to work on the presentation and will create a first draft for our meeting on Friday. 
+Anup - Will work with juan if he needs any assistance. Will work with Prashant to create the test cases needed.
+Manav - Will complete https integration. Will work with Prashant with presentation. 
+Juan - Will implement plan created with Anup 
 
-Prashant: Worked with Manav to create Continuous Integration Pipeline.
 
-Juan: Wrote the Home Page, Login Page and Signup Page in Angular. Set up the service for the API call.
 
-Anup: built back end of spring application using a test first approach. Completed 7 test. Implemented Google QR Code Generator.
+### Daily Scrum 3 
 
-Manav: Worked with Prashant to build Continuous Integration Pipeline and worked toward CD. Docker containers.
+##### Past 24 Hours
+Alex G - Organized photos for README. Reviewed Sprint Retrospective.  
+Juan - Fixed problem with the user controller loop. 
+Anup - Added 10 unit test cases while developing. Troubleshooting code. 
+Prashant -  created ppt slides for Retrospective presentation.
+Manav - worked on integrating https with spring. worked on contact page.
 
-**Impediments**
+##### Impediments
+We do not forsee and impediments today.
 
-Bugs - There are some bugs in the CD Pipeline.
 
-Impediment solution plan: Manav and Prashant will continue to troubleshoot and fix bugs.
-
-Front-End/Back-End Integration – there is still some work to be done
-
-Impediment solution plan: Juan and Anup will work together to integrate.
-
-Next 24 Hours:
-
-Alex: Will continue working on the README. Will create hard copy of Burndown Chart.
-
-Manav – Fix Bugs in the CI/CD Pipeline
-
-Prashant – Fix Bugs in the CI/CD Pipeline
-
-Juan – Integrate Frontend with backend.
-
-Anup – Integrate Backend with Frontend.
+##### Next 24 Hours
+Alex G - Mob programming. Format and consolidate README. 
+Prashant - Mob programming. Will work on the ppt slides
+Anup - will debug the BDD test. 
+Manav - working on contact page form and integrating https on Spring. Adding pictures to ppt 
+Juan - Will complete the API integration.
 
