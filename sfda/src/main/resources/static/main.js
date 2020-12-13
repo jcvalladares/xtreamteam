@@ -914,8 +914,8 @@ __webpack_require__.r(__webpack_exports__);
 Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])();
 class Config {
     constructor() {
-        //  public serverUrl = 'http://54.219.4.96:8080/';
-        this.serverUrl = 'http://localhost:8080/';
+        this.serverUrl = 'http://54.219.4.96:8080/';
+        //public serverUrl = 'http://localhost:8080/';
         this.loginUrl = this.serverUrl + 'api/login/login';
         this.signupUrl = this.serverUrl + 'api/user';
         this.getQrCodeUrl = this.serverUrl + 'api/get_qr?';
