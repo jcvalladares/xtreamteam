@@ -173,7 +173,6 @@
 ###### For our production environment, we are Dockerizing the application to a new container.
 
 
-
 #### RUBRIC: Practice Sprint Presentation
 
 ###### We practiced our presentation on Sunday 12/13. Pictures are listed below.
@@ -184,19 +183,17 @@
 
 #### RUBRIC: Sprint Retrospective: Your team conducts a Sprint Retrospective. All team members participate in the sprint retrospective. As a team, you identify at least one helpful change to improve your effectiveness together. You make a concrete plan for making that change during the next sprint. (Provide evidence. 1 point for each sentence in this rubric element.)
 
-#### At the end of our sprint, on NOV 29th, we conducted our Sprint Retrospective. All team members were present.
+###### At the end of our sprint, on DEC 13th, we conducted our Sprint Retrospective. All team members were present.
 
-#### ISSUE: We did a great job of updating our tasks, but could have done better.
+###### ISSUE: The desired design (look and feel) of the application is unclear.
+###### SOLUTION: The Product Owner will build a wireframe to clarify.
 
-#### SOLUTION: Instead of waiting until the group meets to update tasks, we will update the tasks as soon as we complete them, and then will review with the group afterwards.
+###### ISSUE: The lack of API documentation is slowing down the development process. 
+###### SOLUTION: We will use Swagger to clearly document all API functionalities.
 
-#### ISSUE: We felt that our diverse CI/CD knowledge prevented us from coordinating and being as effective as possible.
+###### ISSUE: The lack of Database Design documentation is slowing down the development process.
+###### SOLUTION: We will begin using a database migration tool called FlyAway that will keep track of all database changes.
 
-#### SOLUTION: Moving forward, the developers without Jenkins experience will spend some time researching.
-
-#### ISSUE: We felt our version control knowledge differed enough to prevent us from being as effective as possible.
-
-#### SOLUTION; Moving forward, the developers without version control experience will spend time researching it.
 
 
 
