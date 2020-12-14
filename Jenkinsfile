@@ -62,7 +62,7 @@ node {
 					} catch (Exception e) {
 						echo 'Exception occurred: ' + e.toString()
 					}
-					sh "docker run --name sfdadockerpro -d -p 81:8080 -p 443:443 sfdadocker:${env.BUILD_NUMBER}"
+					sh "docker run --name sfdadockerpro -d -p 80:8080 -p 443:443 sfdadocker:${env.BUILD_NUMBER}"
 				}
 				else {
 					echo "Production Deployment Skipped"
