@@ -204,27 +204,38 @@
 
 ##### Past 24 Hours
 Alex G - Sprint Planning Session. Reviewed information regarding Sprint retrospectives.
+
 Juan - Sprint Planning Session. Home Page/Login Screen. 
+
 Anup - Sprint Planning Session. Wrapping up the controlling.
+
 Prashant - Sprint Planning Session. Reviewed information for Product Owner Presentation.
+
 Manav - Sprint Planning Session. Added production server to the pipeline. Server is running on port 80. Linked to domain. Working on https.
 
 ##### Impediments
 IMPEDIMENT: Web API not responding properly to a POST request.
+
 SOLUTION: Juan will continue trying different approaches and if needed, we will modify the back end. 
 
 IMPEDIMENT: The whole group has to do a Sprint Retrospective in fron of the whole class
+
 SOLUTION: we will continue to research how to do an awesome Sprint Retrospective
 
 IMPEDIMENT: With the semester ending, we all have increased deadlines for other classes
+
 SOLUTION: we will meet regularly even if for shorter time period to ensure that we get everything can accomplished
 
 
-##### Next 24 Hours
+##### Next 24 Hours. 
 Alex G - Begin the README. Start adding current info the the README.
+
 Prashant - Will be working on PPT in preparation for the presentation. 
+
 Anup - Will create test cases and  complete the controller for the registration functionality.
+
 Manav - Will create the https. 
+
 Juan - Complete Integration w/Web API (see impediment). 
 
 
@@ -236,22 +247,31 @@ Juan - Complete Integration w/Web API (see impediment).
 
 ##### Past 24 Hours
 Alex G - Worked on the README. Added more info to out notes.
+
 Juan - Worked with Anup to create a plan to integrate with the Web API
+
 Anup - worked with juan to create a plan for the API integration. 
+
 Prashant - began working on presentation and worked on BDD page.
+
 Manav - configured https. created contact page. 
 
 ##### Impediments
 IMPEDIMENT: We have a lot of work and this is a busy week. 
+
 SOLUTION: be sure to manage our time and keep eachother posted if anything comes up. Also we will keep Saturday open as an optional day to work if needed. 
 
 
 
 ##### Next 24 Hours
 Alex G - Will continue working on the README, and research Sprint Retrospective approaches. 
+
 Prashant - Will continue to work on the presentation and will create a first draft for our meeting on Friday. 
+
 Anup - Will work with juan if he needs any assistance. Will work with Prashant to create the test cases needed.
+
 Manav - Will complete https integration. Will work with Prashant with presentation. 
+
 Juan - Will implement plan created with Anup 
 
 
@@ -259,10 +279,14 @@ Juan - Will implement plan created with Anup
 ### Daily Scrum 3 
 
 ##### Past 24 Hours
-Alex G - Organized photos for README. Reviewed Sprint Retrospective.  
-Juan - Fixed problem with the user controller loop. 
-Anup - Added 10 unit test cases while developing. Troubleshooting code. 
-Prashant -  created ppt slides for Retrospective presentation.
+Alex G - Organized photos for README. Reviewed Sprint Retrospective.   
+
+Juan - Fixed problem with the user controller loop.  
+
+Anup - Added 10 unit test cases while developing. Troubleshooting code.  
+
+Prashant -  created ppt slides for Retrospective presentation.  
+
 Manav - worked on integrating https with spring. worked on contact page.
 
 ##### Impediments
@@ -271,8 +295,12 @@ We do not forsee and impediments today.
 
 ##### Next 24 Hours
 Alex G - Mob programming. Format and consolidate README. 
+
 Prashant - Mob programming. Will work on the ppt slides
+
 Anup - will debug the BDD test. 
+
 Manav - working on contact page form and integrating https on Spring. Adding pictures to ppt 
+
 Juan - Will complete the API integration.
 
